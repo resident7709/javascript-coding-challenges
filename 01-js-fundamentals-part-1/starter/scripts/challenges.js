@@ -36,3 +36,5 @@ console.log("markHigherBMI = " + markHigherBMI);
 // * 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 // * BMI (28.3) is higher than John's (23.9)!"
 // * Hint: Use an if/else statement
+
+// * CHALLENGE#3
