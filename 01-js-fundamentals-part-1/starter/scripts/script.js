@@ -1,27 +1,20 @@
-// *Data1
-let weightMark = 78;
-let heightMark = 1.69;
-let weightJohn = 92;
-let heightJohn = 1.95;
+const age = 13;
 
-let bmiMark = weightMark / heightMark ** 2;
-console.log("if Mark's BMI: " + bmiMark.toFixed(2));
-let bmiJohn = weightJohn / (heightJohn * heightJohn);
-console.log("and John's BMI: " + bmiJohn.toFixed(2));
+if (age >= 18) {
+  console.log("You can drive!!🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`You can start drive after ${yearsLeft} years..`);
+}
 
-let markHigherBMI = bmiMark > bmiJohn;
-console.log("markHigherBMI = " + markHigherBMI);
+const birthYear = 2003;
 
-// *Data2
-weightMark = 95;
-heightMark = 1.88;
-weightJohn = 85;
-heightJohn = 1.76;
+let century;
 
-bmiMark = weightMark / heightMark ** 2;
-console.log("if Mark's BMI: " + bmiMark.toFixed(2));
-bmiJohn = weightJohn / (heightJohn * heightJohn);
-console.log("and John's BMI: " + bmiJohn.toFixed(2));
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
 
-markHigherBMI = bmiMark > bmiJohn;
-console.log("markHigherBMI = " + markHigherBMI);
+console.log(century);

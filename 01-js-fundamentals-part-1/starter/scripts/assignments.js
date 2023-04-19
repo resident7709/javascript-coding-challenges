@@ -1,18 +1,52 @@
-let country = "Russia";
-const continent = "Eurasia";
-let population = 143.4;
+let myCountry;
+const myCountryContinent = "Eurasia";
+let myCountryPopulation = 143.4;
 
-let language;
-language = "Russian";
-country = "MotherRussia";
+let halfPopulation = myCountryPopulation / 2;
 
-console.log(country, continent, population);
+myCountryPopulation = ++myCountryPopulation;
+
+let myCountryLanguage;
+myCountryLanguage = "russian";
+myCountry = "Russia";
 
 const isIsland = false;
 
-console.log(
-  typeof isIsland,
-  typeof population,
-  typeof country,
-  typeof language
-);
+let finlandPopulation = 6;
+let averagePopulation = 33;
+
+let description =
+  myCountry +
+  " is in " +
+  myCountryContinent +
+  ", and its " +
+  myCountryPopulation +
+  " million people speak " +
+  myCountryLanguage +
+  ".";
+
+let description1 = `${myCountry} is in ${myCountryContinent}, and its ${myCountryPopulation} million people speak ${myCountryLanguage}.`;
+
+if (myCountryPopulation > averagePopulation) {
+  console.log(`${myCountry}'s population is above average.`);
+} else {
+  console.log(
+    `${myCountry}'s population is ${
+      averagePopulation - myCountryPopulation
+    } million below average.`
+  );
+}
+
+// console.log(description);
+// console.log(description1);
+// console.log(myCountryPopulation > finlandPopulation);
+// console.log(myCountryPopulation < averagePopulation);
+
+// console.log(myCountry, myCountryContinent, myCountryPopulation);
+// console.log(halfPopulation);
+// console.log(
+//   typeof isIsland,
+//   typeof myCountryPopulation,
+//   typeof myCountry,
+//   typeof myCountryLanguage
+// );
