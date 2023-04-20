@@ -1,42 +1,79 @@
+// * CHALLENGE#3
+const averageDolphins = (97 + 112 + 101) / 3;
+const averageKoalas = (109 + 95 + 106) / 3;
+
+let winnerDolphins = averageDolphins > averageKoalas;
+let winnerKoalas = averageKoalas > averageDolphins;
+let draw = averageDolphins == averageKoalas;
+
+console.log("Dolphins: " + averageDolphins.toFixed(2));
+console.log("Koalas: " + averageKoalas.toFixed(2));
+
+// if (winnerDolphins) {
+//   console.log("Dolphins = Winner!!🏆");
+// } else if (winnerKoalas) {
+//   console.log("Koalas = Winner!!🏆");
+// } else if (draw) {
+//   console.log("It's a Draw..");
+// }
+
+// * Bonus 1
+// if (winnerDolphins && averageDolphins >= 100) {
+//   console.log("Dolphins = Winner!!🏆");
+// } else if (winnerKoalas && averageKoalas >= 100) {
+//   console.log("Koalas = Winner!!🏆");
+// } else if (draw) {
+//   console.log("It's a Draw..");
+// }
+
+// * Bonus 2
+if (winnerDolphins && averageDolphins >= 100) {
+  console.log("Dolphins = Winner!!🏆");
+} else if (winnerKoalas && averageKoalas >= 100) {
+  console.log("Koalas = Winner!!🏆");
+} else if (draw && averageDolphins >= 100 && averageKoalas >= 100) {
+  console.log("It's a Draw!");
+} else {
+  console.log("No team wins the trophy..");
+}
+
 // * CHALLENGE#1 + CHALLENGE#2
 // * Data1
-let weightMark = 78;
-let heightMark = 1.69;
-let weightJohn = 92;
-let heightJohn = 1.95;
+// let weightMark = 78;
+// let heightMark = 1.69;
+// let weightJohn = 92;
+// let heightJohn = 1.95;
 
-let bmiMark = weightMark / heightMark ** 2;
-let bmiJohn = weightJohn / (heightJohn * heightJohn);
+// let bmiMark = weightMark / heightMark ** 2;
+// let bmiJohn = weightJohn / (heightJohn * heightJohn);
 
-let markHigherBMI = bmiMark > bmiJohn;
+// let markHigherBMI = bmiMark > bmiJohn;
 
-if (markHigherBMI) {
-  console.log(
-    `Mark's BMI (${bmiMark.toFixed(
-      2
-    )}) is higher than John's (${bmiJohn.toFixed(2)})!`
-  );
-} else {
-  console.log("John's BMI is higher than Mark's!");
-}
+// if (markHigherBMI) {
+//   console.log(
+//     `Mark's BMI (${bmiMark.toFixed(
+//       2
+//     )}) is higher than John's (${bmiJohn.toFixed(2)})!`
+//   );
+// } else {
+//   console.log("John's BMI is higher than Mark's!");
+// }
 
 // * Data2
-weightMark = 95;
-heightMark = 1.88;
-weightJohn = 85;
-heightJohn = 1.76;
+// weightMark = 95;
+// heightMark = 1.88;
+// weightJohn = 85;
+// heightJohn = 1.76;
 
-bmiMark = weightMark / heightMark ** 2;
-bmiJohn = weightJohn / (heightJohn * heightJohn);
+// bmiMark = weightMark / heightMark ** 2;
+// bmiJohn = weightJohn / (heightJohn * heightJohn);
 
-if (markHigherBMI != false) {
-  console.log(
-    `John's BMI (${bmiJohn.toFixed(
-      2
-    )}) is higher than Mark's (${bmiMark.toFixed(2)})!`
-  );
-} else {
-  console.log("Mark's BMI is higher than John's!");
-}
-
-// * CHALLENGE#3
+// if (markHigherBMI != false) {
+//   console.log(
+//     `John's BMI (${bmiJohn.toFixed(
+//       2
+//     )}) is higher than Mark's (${bmiMark.toFixed(2)})!`
+//   );
+// } else {
+//   console.log("Mark's BMI is higher than John's!");
+// }

@@ -1,14 +1,14 @@
-let country = "Russia";
+// let country = "Russia";
 
-let language = "russian";
-let population = 143.4;
-let isIsland = false;
+// let language = "russian";
+// let population = 143.4;
+// let isIsland = false;
 
-const countryForSarah = language == "english" && population < 50 && !isIsland;
+// const countryForSarah = language == "english" && population < 50 && !isIsland;
 
-if (countryForSarah) {
-  console.log(`You should live in ${country}!`);
-} else console.log(`${country} does not meet your criteria :(`);
+// if (countryForSarah) {
+//   console.log(`You should live in ${country}!`);
+// } else console.log(`${country} does not meet your criteria :(`);
 
 // const numNeighbours = Number(
 //   prompt("How many neighbour countries does your country have?")

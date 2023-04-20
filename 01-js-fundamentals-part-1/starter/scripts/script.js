@@ -1,20 +1,20 @@
 // * logical operators
-const hasDriversLicense = true; // A
-const hasGoodVision = true; // B
-const isTired = true; // C
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+// const isTired = true; // C
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-console.log(!hasDriversLicense); // ! = NOT operator
-console.log(!hasGoodVision); // ! = NOT operator
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense); // ! = NOT operator
+// console.log(!hasGoodVision); // ! = NOT operator
 
-const shouldDrive = hasDriversLicense && hasGoodVision && !isTired;
+// const shouldDrive = hasDriversLicense && hasGoodVision && !isTired;
 
-if (shouldDrive) {
-  console.log("able to drive");
-} else {
-  console.log("not able to drive yet");
-}
+// if (shouldDrive) {
+//   console.log("able to drive");
+// } else {
+//   console.log("not able to drive yet");
+// }
 
 // * equality operators: ==&===
 // const age = "18";
