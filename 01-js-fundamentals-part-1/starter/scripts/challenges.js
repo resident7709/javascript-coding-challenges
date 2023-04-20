@@ -1,10 +1,10 @@
 // * CHALLENGE#3
-const averageDolphins = (97 + 112 + 101) / 3;
-const averageKoalas = (109 + 95 + 106) / 3;
+const averageDolphins = (97 + 112 + 80) / 3;
+const averageKoalas = (109 + 95 + 50) / 3;
 
-let winnerDolphins = averageDolphins > averageKoalas;
-let winnerKoalas = averageKoalas > averageDolphins;
-let draw = averageDolphins == averageKoalas;
+const winnerDolphins = averageDolphins > averageKoalas;
+const winnerKoalas = averageKoalas > averageDolphins;
+const draw = averageDolphins === averageKoalas;
 
 console.log("Dolphins: " + averageDolphins.toFixed(2));
 console.log("Koalas: " + averageKoalas.toFixed(2));
@@ -34,7 +34,7 @@ if (winnerDolphins && averageDolphins >= 100) {
 } else if (draw && averageDolphins >= 100 && averageKoalas >= 100) {
   console.log("It's a Draw!");
 } else {
-  console.log("No team wins the trophy..");
+  console.log("No one wins the trophy..");
 }
 
 // * CHALLENGE#1 + CHALLENGE#2
