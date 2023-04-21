@@ -1,29 +1,29 @@
 // * conditional (ternary operator)
 // * условие ? выполнить если true : выполнить если false
-const age = 16;
+// const age = 16;
 
 // age >= 18 ? console.log("Cool..") : console.log("Cool also..");
 
-const drink = age >= 18 ? "no wine anyway.." : "no wine yet!!";
+// const drink = age >= 18 ? "no wine anyway.." : "no wine yet!!";
 
 // console.log(drink);
 
-const mySalary = 150000;
-let money;
+// const mySalary = 150000;
+// let money;
 
-if (mySalary >= 100000) {
-  money = "💰💰";
-} else {
-  money = "💰";
-}
+// if (mySalary >= 100000) {
+//   money = "💰💰";
+// } else {
+//   money = "💰";
+// }
 
-console.log(money);
+// console.log(money);
 
-console.log(
-  `I like to drink ${
-    age >= 18 ? "no wine, but coffee anyway.." : "no wine, but water yet!!"
-  }`
-);
+// console.log(
+//   `I like to drink ${
+//     age >= 18 ? "no wine, but coffee anyway.." : "no wine, but water yet!!"
+//   }`
+// );
 
 // * switch statement
 // let day = "sunday";

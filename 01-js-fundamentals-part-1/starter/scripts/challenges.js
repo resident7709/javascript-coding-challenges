@@ -1,3 +1,13 @@
+// * CHALLENGE#4 (Tip Calculator)
+// const bill = 430;
+
+// const tips = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const total = bill + tips;
+
+// console.log(
+//   `The bill was ${bill}, the tip was ${tips}, and the total value ${total}..`
+// );
+
 // * CHALLENGE#3
 // const averageDolphins = (97 + 112 + 80) / 3;
 // const averageKoalas = (109 + 95 + 50) / 3;
