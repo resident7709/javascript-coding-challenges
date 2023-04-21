@@ -1,45 +1,72 @@
-// * switch Statement
-let day = "sunday";
+// * conditional (ternary operator)
+// * условие ? выполнить если true : выполнить если false
+const age = 16;
 
-switch (day) {
-  case "monday": // day === "monday"
-    console.log("Learn React!!");
-    console.log("AX-1 training!!");
-    break;
-  case "tuesday":
-    console.log("Lear JS!!");
-    break;
-  case "wednesday":
-  case "thursday":
-    console.log("Learn Git & NPM!!");
-    break;
-  case "friday":
-    console.log("Learn Module Bundlers!");
-    break;
-  case "saturday":
-  case "sunday":
-    console.log("Learn Tailwind & Modern CSS.. ");
-    break;
-  default:
-    console.log("Not a valid day..");
-}
+// age >= 18 ? console.log("Cool..") : console.log("Cool also..");
 
-day = "tuesday";
+const drink = age >= 18 ? "no wine anyway.." : "no wine yet!!";
 
-if (day === "monday") {
-  console.log("Learn React!!");
-  console.log("AX-1 training!!");
-} else if (day === "tuesday") {
-  console.log("Learn Git & NPM!!");
-} else if (day === "wednesday" || day === "thursday") {
-  console.log("Learn Git & NPM!!");
-} else if (day === "friday") {
-  console.log("Learn Module Bundlers!");
-} else if (day === "saturday" || day === "sunday") {
-  console.log("Learn Tailwind & Modern CSS.. ");
+// console.log(drink);
+
+const mySalary = 150000;
+let money;
+
+if (mySalary >= 100000) {
+  money = "💰💰";
 } else {
-  console.log("Not a valid day..");
+  money = "💰";
 }
+
+console.log(money);
+
+console.log(
+  `I like to drink ${
+    age >= 18 ? "no wine, but coffee anyway.." : "no wine, but water yet!!"
+  }`
+);
+
+// * switch statement
+// let day = "sunday";
+
+// switch (day) {
+//   case "monday": // day === "monday"
+//     console.log("Learn React!!");
+//     console.log("AX-1 training!!");
+//     break;
+//   case "tuesday":
+//     console.log("Lear JS!!");
+//     break;
+//   case "wednesday":
+//   case "thursday":
+//     console.log("Learn Git & NPM!!");
+//     break;
+//   case "friday":
+//     console.log("Learn Module Bundlers!");
+//     break;
+//   case "saturday":
+//   case "sunday":
+//     console.log("Learn Tailwind & Modern CSS.. ");
+//     break;
+//   default:
+//     console.log("Not a valid day..");
+// }
+
+// day = "tuesday";
+
+// if (day === "monday") {
+//   console.log("Learn React!!");
+//   console.log("AX-1 training!!");
+// } else if (day === "tuesday") {
+//   console.log("Learn Git & NPM!!");
+// } else if (day === "wednesday" || day === "thursday") {
+//   console.log("Learn Git & NPM!!");
+// } else if (day === "friday") {
+//   console.log("Learn Module Bundlers!");
+// } else if (day === "saturday" || day === "sunday") {
+//   console.log("Learn Tailwind & Modern CSS.. ");
+// } else {
+//   console.log("Not a valid day..");
+// }
 
 // * logical operators
 // const hasDriversLicense = true; // A

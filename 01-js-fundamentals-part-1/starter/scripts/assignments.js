@@ -1,99 +1,34 @@
+let country = "Russia";
 let language = "russian";
+let population = 143.4;
 
-switch (language) {
-  case "chinese":
-  case "mandarin":
-    console.log("MOST number of native speakers!");
-    break;
-  case "spanish":
-    console.log("2nd place in number of native speakers");
-    break;
-  case "english":
-    console.log("3rd place");
-    break;
-  case "hindi":
-    console.log("Number 4");
-    break;
-  case "arabic":
-    console.log("5th most spoken language");
-    break;
-  default:
-    console.log("Great language too :D");
-}
+population > 33
+  ? console.log(`${country}'s population is above average!`)
+  : console.log(`${country}'s population is below average..`);
 
-// let country = "Russia";
+console.log(
+  `${country}'s population is ${population > 33 ? "above" : "below"} average.`
+);
 
-// let language = "russian";
-// let population = 143.4;
-// let isIsland = false;
+//*==========================================*//
 
-// const countryForSarah = language == "english" && population < 50 && !isIsland;
-
-// if (countryForSarah) {
-//   console.log(`You should live in ${country}!`);
-// } else console.log(`${country} does not meet your criteria :(`);
-
-// const numNeighbours = Number(
-//   prompt("How many neighbour countries does your country have?")
-// );
-
-// if (numNeighbours === 1) {
-//   console.log("Only 1 border!");
-// } else if (numNeighbours >= 1) {
-//   console.log("More than 1 border..");
-// } else console.log("No borders..");
-
-// console.log(numNeighbours);
-
-// let myCountry;
-// const myCountryContinent = "Eurasia";
-// let myCountryPopulation = 143.4;
-
-// let halfPopulation = myCountryPopulation / 2;
-
-// myCountryPopulation = ++myCountryPopulation;
-
-// let myCountryLanguage;
-// myCountryLanguage = "russian";
-// myCountry = "Russia";
-
-// const isIsland = false;
-
-// let finlandPopulation = 6;
-// let averagePopulation = 33;
-
-// let description =
-//   myCountry +
-//   " is in " +
-//   myCountryContinent +
-//   ", and its " +
-//   myCountryPopulation +
-//   " million people speak " +
-//   myCountryLanguage +
-//   ".";
-
-// let description1 = `${myCountry} is in ${myCountryContinent}, and its ${myCountryPopulation} million people speak ${myCountryLanguage}.`;
-
-// if (myCountryPopulation > averagePopulation) {
-//   console.log(`${myCountry}'s population is above average.`);
-// } else {
-//   console.log(
-//     `${myCountry}'s population is ${
-//       averagePopulation - myCountryPopulation
-//     } million below average.`
-//   );
+// switch (language) {
+//   case "chinese":
+//   case "mandarin":
+//     console.log("MOST number of native speakers!");
+//     break;
+//   case "spanish":
+//     console.log("2nd place in number of native speakers");
+//     break;
+//   case "english":
+//     console.log("3rd place");
+//     break;
+//   case "hindi":
+//     console.log("Number 4");
+//     break;
+//   case "arabic":
+//     console.log("5th most spoken language");
+//     break;
+//   default:
+//     console.log("Great language too :D");
 // }
-
-// console.log(description);
-// console.log(description1);
-// console.log(myCountryPopulation > finlandPopulation);
-// console.log(myCountryPopulation < averagePopulation);
-
-// console.log(myCountry, myCountryContinent, myCountryPopulation);
-// console.log(halfPopulation);
-// console.log(
-//   typeof isIsland,
-//   typeof myCountryPopulation,
-//   typeof myCountry,
-//   typeof myCountryLanguage
-// );
