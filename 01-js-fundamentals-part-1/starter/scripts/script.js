@@ -1,3 +1,46 @@
+// * switch Statement
+let day = "sunday";
+
+switch (day) {
+  case "monday": // day === "monday"
+    console.log("Learn React!!");
+    console.log("AX-1 training!!");
+    break;
+  case "tuesday":
+    console.log("Lear JS!!");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Learn Git & NPM!!");
+    break;
+  case "friday":
+    console.log("Learn Module Bundlers!");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Learn Tailwind & Modern CSS.. ");
+    break;
+  default:
+    console.log("Not a valid day..");
+}
+
+day = "tuesday";
+
+if (day === "monday") {
+  console.log("Learn React!!");
+  console.log("AX-1 training!!");
+} else if (day === "tuesday") {
+  console.log("Learn Git & NPM!!");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Learn Git & NPM!!");
+} else if (day === "friday") {
+  console.log("Learn Module Bundlers!");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Learn Tailwind & Modern CSS.. ");
+} else {
+  console.log("Not a valid day..");
+}
+
 // * logical operators
 // const hasDriversLicense = true; // A
 // const hasGoodVision = true; // B
