@@ -1,6 +1,10 @@
 "use strict";
 const worldPopulation = 7900;
 
+const countryChi = "China";
+const countryRu = "Russia";
+const countryFin = "Finland";
+
 const populationChina = 1441;
 const populationRussia = 143;
 const populationFinland = 6;
@@ -26,9 +30,9 @@ const populationAustralia = 26;
 // console.log(descChina);
 
 // * Function Declarations vs. Expressions
-// function percentageOfWorld1(population) {
-//   return (population / worldPopulation) * 100;
-// }
+function percentageOfWorld1(population) {
+  return (population / worldPopulation) * 100;
+}
 
 // const prcChina = percentageOfWorld1(populationChina).toFixed(2);
 // const prcRussia = percentageOfWorld1(populationRussia).toFixed(2);
@@ -54,3 +58,18 @@ const populationAustralia = 26;
 // const prcAustralia = percentageOfWorld1(populationAustralia).toFixed(2);
 
 // console.log(prcPoland, prcSweden, prcAustralia);
+
+// * Functions Calling Other Functions
+const describePopulation = (country, population) => {
+  //! параметр population используется как параметр для другой функции !
+  const percentage = percentageOfWorld1(population);
+  //! обратить внимание и запомнить !
+  const description = `${country} has ${population} million people,
+  which is about ${percentage.toFixed(2)} of the world.`;
+
+  console.log(description);
+};
+
+describePopulation(countryChi, populationChina);
+describePopulation(countryRu, populationRussia);
+describePopulation(countryFin, populationFinland);
