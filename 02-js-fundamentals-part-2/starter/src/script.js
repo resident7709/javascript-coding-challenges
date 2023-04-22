@@ -1,5 +1,21 @@
 "use strict";
 
+// * Arrow Functions
+// !expression..do not get 'this' keyword..
+const calcAge3 = (birthYear) => 2023 - birthYear;
+
+const age3 = calcAge3(2003);
+
+const yearsUntilRetirement = (birthYear, fullName) => {
+  const age = 2023 - birthYear;
+  const retirement = 70 - age;
+  return `${fullName} retires in ${retirement} years.`;
+};
+
+console.log(yearsUntilRetirement(1971, "Alex Romanov"));
+console.log(yearsUntilRetirement(1992, "Artur Romanov"));
+console.log(yearsUntilRetirement(2003, "Stas Romanov"));
+
 // * Function Declarations vs. Expressions
 // !declaration = может вызываться сверху
 const age1 = calcAge1(1971);
@@ -15,7 +31,7 @@ const calcAge2 = function (birthYear) {
 
 const age2 = calcAge2(1992);
 
-// console.log(age1, age2);
+// console.log(age1, age2, age3);
 
 // * Functions
 // function logger() {

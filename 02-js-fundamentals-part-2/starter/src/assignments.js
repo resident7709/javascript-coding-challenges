@@ -7,6 +7,9 @@ const populationFinland = 6;
 const populationIndia = 1388;
 const populationThailand = 69;
 const populationUK = 68;
+const populationPoland = 38;
+const populationSweden = 10;
+const populationAustralia = 26;
 
 // * Functions
 // function describeCountry(country, population, capitalCity) {
@@ -23,24 +26,31 @@ const populationUK = 68;
 // console.log(descChina);
 
 // * Function Declarations vs. Expressions
-function percentageOfWorld1(population) {
-  const percentage = (population / worldPopulation) * 100;
-  return percentage;
-}
+// function percentageOfWorld1(population) {
+//   return (population / worldPopulation) * 100;
+// }
 
-const CHINA = percentageOfWorld1(populationChina).toFixed(2);
-const RUSSIA = percentageOfWorld1(populationRussia).toFixed(2);
-const FINLAND = percentageOfWorld1(populationFinland).toFixed(2);
+// const prcChina = percentageOfWorld1(populationChina).toFixed(2);
+// const prcRussia = percentageOfWorld1(populationRussia).toFixed(2);
+// const prcFinland = percentageOfWorld1(populationFinland).toFixed(2);
 
-console.log(CHINA, RUSSIA, FINLAND);
+// console.log(prcChina, prcRussia, prcFinland);
 
-const percentageOfWorld2 = function (population) {
-  const percentage = (population / worldPopulation) * 100;
-  return percentage;
-};
+// const percentageOfWorld2 = function (population) {
+//   return (population / worldPopulation) * 100;
+// };
 
-const INDIA = percentageOfWorld1(populationIndia).toFixed(2);
-const THAILAND = percentageOfWorld1(populationThailand).toFixed(2);
-const UK = percentageOfWorld1(populationUK).toFixed(2);
+// const prcIndia = percentageOfWorld1(populationIndia).toFixed(2);
+// const prcThailand = percentageOfWorld1(populationThailand).toFixed(2);
+// const prcUK = percentageOfWorld1(populationUK).toFixed(2);
 
-console.log(INDIA, THAILAND, UK);
+// console.log(prcIndia, prcThailand, prcUK);
+
+// * Arrow Functions
+// const percentageOfWorld3 = (population) => (population / worldPopulation) * 100;
+
+// const prcPoland = percentageOfWorld1(populationPoland).toFixed(2);
+// const prcSweden = percentageOfWorld1(populationSweden).toFixed(2);
+// const prcAustralia = percentageOfWorld1(populationAustralia).toFixed(2);
+
+// console.log(prcPoland, prcSweden, prcAustralia);
