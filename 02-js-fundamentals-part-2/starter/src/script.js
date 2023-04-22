@@ -1,6 +1,21 @@
 "use strict";
 
 // * Function Declarations vs. Expressions
+// !declaration = может вызываться сверху
+const age1 = calcAge1(1971);
+
+function calcAge1(birthYear) {
+  return 2023 - birthYear;
+}
+
+// !expression = не может вызываться сверху (hoisted)
+const calcAge2 = function (birthYear) {
+  return 2023 - birthYear;
+};
+
+const age2 = calcAge2(1992);
+
+// console.log(age1, age2);
 
 // * Functions
 // function logger() {
