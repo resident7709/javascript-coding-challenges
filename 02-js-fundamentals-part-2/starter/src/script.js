@@ -1,22 +1,22 @@
 "use strict";
 
 // * Reviewing Functions
-const calcAge = function (yearOfBirth) {
-  return 2023 - yearOfBirth;
-};
+// const calcAge = function (yearOfBirth) {
+//   return 2023 - yearOfBirth;
+// };
 
-const yearsUntilRetirement = function (birthYear, fullName) {
-  const age = calcAge(birthYear);
-  const retirement = 70 - age;
+// const yearsUntilRetirement = function (birthYear, fullName) {
+//   const age = calcAge(birthYear);
+//   const retirement = 70 - age;
 
-  if (retirement > 0) {
-    return retirement;
-  } else {
-    return -1;
-  }
+//   if (retirement > 0) {
+//     return retirement;
+//   } else {
+//     return -1;
+//   }
 
-  // return console.log(`${fullName} retires in ${retirement} years.`);
-};
+//   return console.log(`${fullName} retires in ${retirement} years.`);
+// };
 
 // console.log(yearsUntilRetirement(1991, "Jonas"));
 // console.log(yearsUntilRetirement(1971, "Alex"));
