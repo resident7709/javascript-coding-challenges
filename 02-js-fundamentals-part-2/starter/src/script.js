@@ -28,7 +28,7 @@
 // console.log(fruits.includes(23));
 
 // * Arrays
-const fruits2 = new Array("apple", "lemon", "mango");
+// const fruits2 = new Array("apple", "lemon", "mango");
 
 // console.log(fruits[0], fruits[2]);
 // console.log(fruits2[fruits2.length - 1]);

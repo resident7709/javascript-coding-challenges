@@ -88,3 +88,21 @@ const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
 
 // console.log(population.length === 4); // !boolean
 // console.log(percentages);
+
+// * Array Methods
+// const neighbours = ["Finland", "Norway", "Denmark"];
+// neighbours.push("Utopia");
+
+// console.log(neighbours);
+
+// neighbours.pop();
+
+// console.log(neighbours);
+
+// if (!neighbours.includes("Germany")) {
+//   console.log("Probably not a central European country :D");
+// }
+
+// neighbours[0] = "Finlandia";
+
+// console.log(neighbours);

@@ -1,5 +1,22 @@
 "use strict";
 
+// *CHALLENGE#2
+const bill = 100;
+
+const bills = [125, 555, 44];
+const tips = [];
+
+function calcTip() {
+  const tips = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  const total = bill + tips;
+
+  console.log(
+    `The bill was ${bill}, the tip was ${tips}, and the total value ${total}..`
+  );
+}
+
+calcTip();
+
 // *CHALLENGE#1
 // const calcAverage = (a, b, c) => (a + b + c) / 3;
 
