@@ -4,14 +4,15 @@ const worldPopulation = 7900;
 const countryChi = "China";
 const countryRu = "Russia";
 const countryFin = "Finland";
+const countryInd = "India";
 
-const populationChina = 1441;
-const populationRussia = 143;
-const populationFinland = 6;
-const populationIndia = 1388;
-const populationThailand = 69;
-const populationUK = 68;
-const populationPoland = 38;
+const populationChina = 1455;
+const populationRussia = 146;
+const populationFinland = 5.5;
+const populationIndia = 1418;
+const populationThailand = 70;
+const populationUK = 69;
+const populationPoland = 41;
 const populationSweden = 10;
 const populationAustralia = 26;
 
@@ -30,13 +31,14 @@ const populationAustralia = 26;
 // console.log(descChina);
 
 // * Function Declarations vs. Expressions
-// function percentageOfWorld1(population) {
-//   return (population / worldPopulation) * 100;
-// }
+function percentageOfWorld1(population) {
+  return (population / worldPopulation) * 100;
+}
 
-// const prcChina = percentageOfWorld1(populationChina).toFixed(2);
-// const prcRussia = percentageOfWorld1(populationRussia).toFixed(2);
-// const prcFinland = percentageOfWorld1(populationFinland).toFixed(2);
+const prcChina = percentageOfWorld1(populationChina).toFixed(2);
+const prcRussia = percentageOfWorld1(populationRussia).toFixed(2);
+const prcFinland = percentageOfWorld1(populationFinland).toFixed(2);
+const prcIndia = percentageOfWorld1(populationIndia).toFixed(2);
 
 // console.log(prcChina, prcRussia, prcFinland);
 
@@ -73,3 +75,16 @@ const populationAustralia = 26;
 // describePopulation(countryChi, populationChina);
 // describePopulation(countryRu, populationRussia);
 // describePopulation(countryFin, populationFinland);
+
+// * Arrays
+const population = [
+  populationChina,
+  populationRussia,
+  populationFinland,
+  populationIndia,
+];
+
+const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
+
+console.log(population.length === 4);
+console.log(percentages);
