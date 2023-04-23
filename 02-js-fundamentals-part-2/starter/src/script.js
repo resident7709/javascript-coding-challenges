@@ -1,40 +1,62 @@
 "use strict";
 
+// * Array Methods
+// const fruits = ["kiwi", "banana", "orange"];
+// fruits[1] = "tomato";
+
+// * Add elements
+// const newLength = fruits.push("cabbage"); // ! добавляет элемент в конец массива
+// console.log(newLength);
+
+// fruits.unshift("celery"); // ! добавляет элемент в начало массива
+
+// * Remove elements
+// fruits.pop(); // ! удаляет элемент в конце массива
+// const popped = fruits.pop();
+// console.log(popped);
+
+// fruits.shift(); // ! удаляет элемент в начале массива
+// fruits.push(23);
+
+// if (fruits.includes(23)) {
+//   console.log("Hi, 23..");
+// }
+
+// console.log(fruits);
+// console.log(fruits.indexOf("kiwi"));
+// console.log(fruits.includes("kiwi"));
+// console.log(fruits.includes(23));
+
 // * Arrays
-const fruits = ["kiwi", "banana", "orange"];
 const fruits2 = new Array("apple", "lemon", "mango");
 
 // console.log(fruits[0], fruits[2]);
 // console.log(fruits2[fruits2.length - 1]);
 // console.log(typeof fruits2);
 
-fruits[1] = "tomato";
+// const firstName = "Alex";
 
-// console.log(fruits);
-
-const firstName = "Alex";
-
-const myInfo = [firstName, "Romanov", 2023 - 1971, "React-Developer", fruits2];
+// const myInfo = [firstName, "Romanov", 2023 - 1971, "React-Developer", fruits2];
 
 // console.log(myInfo);
 // console.log(myInfo.length);
 
 // * Exercise
-function calcAge1(birthYear) {
-  return 2023 - birthYear;
-}
+// function calcAge1(birthYear) {
+//   return 2023 - birthYear;
+// }
 
-const years = [1971, 1992, 2003, 2023, 2000];
+// const years = [1971, 1992, 2003, 2023, 2000];
 
-const age1 = calcAge1(years[0]);
-const age2 = calcAge1(years[1]);
-const age3 = calcAge1(years[years.length - 1]);
+// const age1 = calcAge1(years[0]);
+// const age2 = calcAge1(years[1]);
+// const age3 = calcAge1(years[years.length - 1]);
 
-const ages = [
-  calcAge1(years[0]),
-  calcAge1(years[1]),
-  calcAge1(years[years.length - 1]),
-];
+// const ages = [
+//   calcAge1(years[0]),
+//   calcAge1(years[1]),
+//   calcAge1(years[years.length - 1]),
+// ];
 
 // console.log(ages);
 

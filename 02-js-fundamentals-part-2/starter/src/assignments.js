@@ -86,5 +86,5 @@ const population = [
 
 const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
 
-console.log(population.length === 4);
-console.log(percentages);
+// console.log(population.length === 4); // !boolean
+// console.log(percentages);
