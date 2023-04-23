@@ -18,9 +18,9 @@ const yearsUntilRetirement = function (birthYear, fullName) {
   // return console.log(`${fullName} retires in ${retirement} years.`);
 };
 
-console.log(yearsUntilRetirement(1991, "Jonas"));
-console.log(yearsUntilRetirement(1971, "Alex"));
-console.log(yearsUntilRetirement(1930, "Bob"));
+// console.log(yearsUntilRetirement(1991, "Jonas"));
+// console.log(yearsUntilRetirement(1971, "Alex"));
+// console.log(yearsUntilRetirement(1930, "Bob"));
 
 // * Functions Calling Other Functions
 // const cutFruitPieces = (fruit) => fruit * 4;
