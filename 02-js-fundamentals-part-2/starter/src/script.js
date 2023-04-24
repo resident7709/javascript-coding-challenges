@@ -34,7 +34,7 @@ const aboutMe = {
 aboutMe.location = "Tver";
 aboutMe["hobbies"] = "AX training programms";
 
-console.log(aboutMe.getSummary());
+// console.log(aboutMe.getSummary());
 
 // console.log(aboutMe.calcAge());
 // console.log(aboutMe.age);
