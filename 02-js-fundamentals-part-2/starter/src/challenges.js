@@ -1,21 +1,20 @@
 "use strict";
 
 // *CHALLENGE#2
-const bill = 100;
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
 const bills = [125, 555, 44];
-const tips = [];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-function calcTip() {
-  const tips = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-  const total = bill + tips;
+calcTip(bills[0]);
+calcTip(bills[1]);
+calcTip(bills[2]);
 
-  console.log(
-    `The bill was ${bill}, the tip was ${tips}, and the total value ${total}..`
-  );
-}
-
-calcTip();
+console.log(bills);
+console.log(tips);
+console.log(total);
 
 // *CHALLENGE#1
 // const calcAverage = (a, b, c) => (a + b + c) / 3;
