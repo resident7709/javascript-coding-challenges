@@ -142,6 +142,6 @@ const myCountry = {
 // console.log(myCountry);
 
 // * For Loop
-for (let i = 1; i <= 50; i++) {
-  console.log(`Voter number ${i} is currently voting.`);
-}
+// for (let i = 1; i <= 50; i++) {
+//   console.log(`Voter number ${i} is currently voting.`);
+// }

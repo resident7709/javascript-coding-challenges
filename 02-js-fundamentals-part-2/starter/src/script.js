@@ -5,6 +5,36 @@
 //   console.log(`Repetition ${i}..`);
 // }
 
+const aboutMe = {
+  firstName: "Alex",
+  lastName: "Romanov",
+  birthYear: 1971,
+  position: "React-Developer",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
+};
+
+const myInfo = [
+  "Alex",
+  "Romanov",
+  2023 - 1971,
+  "React-Developer",
+  true,
+  "mango",
+];
+
+const types = [];
+
+for (let i = 0; i < myInfo.length; i++) {
+  // * Reading from types array
+  console.log(myInfo[i], typeof myInfo[i]);
+
+  // * Filling types array
+  // types[i] = typeof myInfo[i];
+  types.push(typeof myInfo[i]);
+}
+
+console.log(types);
+
 // * Object Methods
 
 // const aboutMe = {
