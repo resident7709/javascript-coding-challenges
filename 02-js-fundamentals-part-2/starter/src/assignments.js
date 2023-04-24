@@ -114,20 +114,20 @@ const myCountry = {
   language: "russian",
   population: 146,
   neighbours: ["China", "Finland", "Poland", "Turkey", "Japan"],
-  describe: function () {
-    console.log(
-      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries, and a capital called ${this.capital}!!🤩`
-    );
-  },
+  // describe: function () {
+  //   console.log(
+  //     `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries, and a capital called ${this.capital}!!🤩`
+  //   );
+  // },
   checkIsland: function () {
     this.isIsland = this.neighbours.length === 0 ? true : false;
-    // this.isIsland = !Boolean(this.neighbours.length); // * можно и так..
+    // this.isIsland = !Boolean(this.neighbours.length); // * можно так..
   },
 };
 
-myCountry.describe();
-myCountry.checkIsland();
-console.log(myCountry);
+// myCountry.describe();
+// myCountry.checkIsland();
+// console.log(myCountry);
 
 // * Dot vs Bracket Notation
 // console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries
@@ -141,4 +141,7 @@ console.log(myCountry);
 
 // console.log(myCountry);
 
-// * Object Methods
+// * For Loop
+for (let i = 1; i <= 50; i++) {
+  console.log(`Voter number ${i} is currently voting.`);
+}

@@ -1,38 +1,40 @@
 "use strict";
 
-// * Loops
+// * For Loop
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`Repetition ${i}..`);
+// }
 
-// * Objects
 // * Object Methods
 
-const aboutMe = {
-  firstName: "Alex",
-  lastName: "Romanov",
-  birthYear: 1971,
-  position: "React-Developer",
-  skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
-  married: true,
+// const aboutMe = {
+//   firstName: "Alex",
+//   lastName: "Romanov",
+//   birthYear: 1971,
+//   position: "React-Developer",
+//   skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
+//   married: true,
 
-  //   calcAge: (birthYear) => 2023 - birthYear, // function expression
+//   calcAge: (birthYear) => 2023 - birthYear, // function expression
 
-  //   calcAge: function () {
-  //     return 2023 - this.birthYear; // ! this
-  //   },
+//   calcAge: function () {
+//     return 2023 - this.birthYear; // ! this
+//   },
 
-  calcAge: function () {
-    this.age = 2023 - this.birthYear; // ! using this
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear; // ! using this
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is ${this.calcAge()} years old ${
-      this.position
-    }, and he ${this.married ? "is" : "isn't"} married!!🤩`; // ! using ternary operator
-  },
-};
+//   getSummary: function () {
+//     return `${this.firstName} is ${this.calcAge()} years old ${
+//       this.position
+//     }, and he ${this.married ? "is" : "isn't"} married!!🤩`; // ! using ternary operator
+//   },
+// };
 
-aboutMe.location = "Tver";
-aboutMe["hobbies"] = "AX training programms";
+// aboutMe.location = "Tver";
+// aboutMe["hobbies"] = "AX training programms";
 
 // console.log(aboutMe.getSummary());
 
