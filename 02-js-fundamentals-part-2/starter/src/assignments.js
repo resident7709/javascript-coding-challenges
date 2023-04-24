@@ -106,3 +106,14 @@ const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
 // neighbours[0] = "Finlandia";
 
 // console.log(neighbours);
+
+// * Intro to Objects
+const myCountry = {
+  country: "Russia",
+  capital: "Moscow",
+  language: "russian",
+  population: 146,
+  neighbours: ["China", "Finland", "Poland", "Turkey", "Japan"],
+};
+
+// * Dot vs Bracket Notation

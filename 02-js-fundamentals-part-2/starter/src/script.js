@@ -1,16 +1,31 @@
 "use strict";
 
+// * Loops
+
+// * Objects
+const array = [1, 2, 3];
+
+const aboutMe = {
+  firstName: "Alex",
+  lastName: "Romanov",
+  age: 52,
+  position: "React-Developer",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
+};
+
+// console.log(typeof array, typeof aboutMe);
+
 // * Array Methods
 // const fruits = ["kiwi", "banana", "orange"];
 // fruits[1] = "tomato";
 
-// * Add elements
+// * add array elements
 // const newLength = fruits.push("cabbage"); // ! добавляет элемент в конец массива
 // console.log(newLength);
 
 // fruits.unshift("celery"); // ! добавляет элемент в начало массива
 
-// * Remove elements
+// * remove array elements
 // fruits.pop(); // ! удаляет элемент в конце массива
 // const popped = fruits.pop();
 // console.log(popped);
@@ -41,7 +56,7 @@
 // console.log(myInfo);
 // console.log(myInfo.length);
 
-// * Exercise
+// * array exercise
 // function calcAge1(birthYear) {
 //   return 2023 - birthYear;
 // }
@@ -60,7 +75,7 @@
 
 // console.log(ages);
 
-// * Reviewing Functions
+// * Functions Reviewing
 // const calcAge = function (yearOfBirth) {
 //   return 2023 - yearOfBirth;
 // };
