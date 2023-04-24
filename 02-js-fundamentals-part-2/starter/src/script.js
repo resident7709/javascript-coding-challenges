@@ -3,16 +3,53 @@
 // * Loops
 
 // * Objects
+// * Object Methods
+
 const aboutMe = {
   firstName: "Alex",
   lastName: "Romanov",
-  age: 52,
+  birthYear: 1971,
   position: "React-Developer",
   skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
+  married: true,
+
+  //   calcAge: (birthYear) => 2023 - birthYear, // function expression
+
+  //   calcAge: function () {
+  //     return 2023 - this.birthYear; // ! this
+  //   },
+
+  calcAge: function () {
+    this.age = 2023 - this.birthYear; // ! using this
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is ${this.calcAge()} years old ${
+      this.position
+    }, and he ${this.married ? "is" : "isn't"} married!!🤩`; // ! using ternary operator
+  },
 };
 
 aboutMe.location = "Tver";
 aboutMe["hobbies"] = "AX training programms";
+
+console.log(aboutMe.getSummary());
+
+// console.log(aboutMe.calcAge());
+// console.log(aboutMe.age);
+// console.log(aboutMe.age);
+// console.log(aboutMe.age);
+
+// * challenge (objects)
+// Alex has 5 skills, and his best skill is React!!
+
+// console.log(
+//   `${aboutMe.firstName} has ${aboutMe.skills.length} skills, and his best skill is ${aboutMe.skills[3]}!!`
+// );
+
+// * challenge (object methods)
+// todo: Alex is 52 years old React-Developer, and he is/isn't married.
 
 // console.log(aboutMe);
 
@@ -31,13 +68,6 @@ aboutMe["hobbies"] = "AX training programms";
 // } else {
 //   console.log("Choice doesn't exist..");
 // }
-
-// * challenge (objects)
-// Alex has 5 skills, and his best skill is React!!
-
-// console.log(
-//   `${aboutMe.firstName} has ${aboutMe.skills.length} skills, and his best skill is ${aboutMe.skills[3]}!!`
-// );
 
 // * Array Methods
 // const fruits = ["kiwi", "banana", "orange"];
