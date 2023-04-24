@@ -3,8 +3,6 @@
 // * Loops
 
 // * Objects
-const array = [1, 2, 3];
-
 const aboutMe = {
   firstName: "Alex",
   lastName: "Romanov",
@@ -13,7 +11,33 @@ const aboutMe = {
   skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
 };
 
-// console.log(typeof array, typeof aboutMe);
+aboutMe.location = "Tver";
+aboutMe["hobbies"] = "AX training programms";
+
+// console.log(aboutMe);
+
+// const nameKey = "Name";
+
+// console.log(aboutMe["first" + nameKey]);
+// console.log(aboutMe["last" + nameKey]);
+
+// console.log(aboutMe.lastName); // ! dot looks cleaner..
+// console.log(aboutMe["lastName"]); // ! bracket for expressions..
+
+// const interestedIn = prompt("Choose property..");
+
+// if (aboutMe[interestedIn]) {
+//   console.log(aboutMe[interestedIn]);
+// } else {
+//   console.log("Choice doesn't exist..");
+// }
+
+// * challenge (objects)
+// Alex has 5 skills, and his best skill is React!!
+
+// console.log(
+//   `${aboutMe.firstName} has ${aboutMe.skills.length} skills, and his best skill is ${aboutMe.skills[3]}!!`
+// );
 
 // * Array Methods
 // const fruits = ["kiwi", "banana", "orange"];
@@ -56,7 +80,7 @@ const aboutMe = {
 // console.log(myInfo);
 // console.log(myInfo.length);
 
-// * array exercise
+// * exercise (arrays)
 // function calcAge1(birthYear) {
 //   return 2023 - birthYear;
 // }
