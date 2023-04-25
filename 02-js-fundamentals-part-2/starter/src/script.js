@@ -1,5 +1,7 @@
 "use strict";
 
+// * While Loop
+
 // * For Loop
 // for (let i = 1; i <= 10; i++) {
 //   console.log(`Repetition ${i}..`);
@@ -22,18 +24,33 @@ const myInfo = [
   "mango",
 ];
 
+// * looping backwards
+// for (let i = myInfo.length - 1; i >= 0; i--) {
+//   console.log(i, myInfo[i]);
+// }
+
+// * loop in loop
+for (let exercise = 1; exercise <= 3; exercise++) {
+  // console.log(`---Starting exercise ${exercise}`);
+  // ! внутренний цикл повторяется на каждой итерации внешнего цикла
+  for (let rep = 1; rep <= 5; rep++) {
+    // console.log(`Exercise ${exercise}: repetition ${rep}`);
+  }
+}
+
+// *=======================================* //
 const types = [];
 
 for (let i = 0; i < myInfo.length; i++) {
   // * Reading from types array
-  console.log(myInfo[i], typeof myInfo[i]);
+  // console.log(myInfo[i], typeof myInfo[i]);
 
   // * Filling types array
   // types[i] = typeof myInfo[i];
   types.push(typeof myInfo[i]);
 }
 
-console.log(types);
+// console.log(types);
 
 const years = [1991, 2007, 1969, 2020];
 const ages = [];
@@ -43,22 +60,22 @@ for (let i = 0; i < years.length; i++) {
   ages.push(2037 - years[i]);
 }
 
-console.log(ages);
+// console.log(ages);
 
 // * continue and break
-console.log("---ONLY STRINGS---");
-for (let i = 0; i < myInfo.length; i++) {
-  if (typeof myInfo[i] !== "string") continue;
+// console.log("---ONLY STRINGS---");
+// for (let i = 0; i < myInfo.length; i++) {
+//   if (typeof myInfo[i] !== "string") continue;
 
-  console.log(myInfo[i], typeof myInfo[i]);
-}
+//   console.log(myInfo[i], typeof myInfo[i]);
+// }
 
-console.log("---BREAK WITH NUMBER---");
-for (let i = 0; i < myInfo.length; i++) {
-  if (typeof myInfo[i] === "number") break;
+// console.log("---BREAK WITH NUMBER---");
+// for (let i = 0; i < myInfo.length; i++) {
+//   if (typeof myInfo[i] === "number") break;
 
-  console.log(myInfo[i], typeof myInfo[i]);
-}
+//   console.log(myInfo[i], typeof myInfo[i]);
+// }
 
 // * Object Methods
 

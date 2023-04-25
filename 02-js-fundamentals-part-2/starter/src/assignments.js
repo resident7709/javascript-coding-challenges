@@ -165,5 +165,26 @@ for (let i = 0; i < population.length; i++) {
   percentages2.push(perc.toFixed(2));
 }
 
-console.log(percentages);
-console.log(percentages2);
+// console.log(percentages);
+// console.log(percentages2);
+
+// * Looping backwards, Loops in Loops
+
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+// console.log(listOfNeighbours[2].length);
+
+for (let i = 0; i < listOfNeighbours.length; i++)
+  console.log(`Neighbour: ${listOfNeighbours[2][i]}`);
+
+console.log("========================================");
+
+for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+// * While Loop
