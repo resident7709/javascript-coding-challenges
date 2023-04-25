@@ -77,14 +77,14 @@ const prcIndia = percentageOfWorld1(populationIndia).toFixed(2);
 // describePopulation(countryFin, populationFinland);
 
 // * Arrays
-const population = [
-  populationChina,
-  populationRussia,
-  populationFinland,
-  populationIndia,
-];
+// const population = [
+//   populationChina,
+//   populationRussia,
+//   populationFinland,
+//   populationIndia,
+// ];
 
-const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
+// const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
 
 // console.log(population.length === 4); // !boolean
 // console.log(percentages);
@@ -145,3 +145,25 @@ const myCountry = {
 // for (let i = 1; i <= 50; i++) {
 //   console.log(`Voter number ${i} is currently voting.`);
 // }
+
+// * Looping Arrays, Breaking, Continuing
+
+const population = [
+  populationChina,
+  populationRussia,
+  populationFinland,
+  populationIndia,
+];
+
+const percentages = [prcChina, prcRussia, prcFinland, prcIndia];
+const percentages2 = [];
+
+for (let i = 0; i < population.length; i++) {
+  // percentages2.push(percentages[i]);
+
+  const perc = percentageOfWorld1(population[i]);
+  percentages2.push(perc.toFixed(2));
+}
+
+console.log(percentages);
+console.log(percentages2);
