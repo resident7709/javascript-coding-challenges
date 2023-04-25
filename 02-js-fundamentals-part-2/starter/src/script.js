@@ -35,6 +35,31 @@ for (let i = 0; i < myInfo.length; i++) {
 
 console.log(types);
 
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  // ages[i] = 2023 - years[i];
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// * continue and break
+console.log("---ONLY STRINGS---");
+for (let i = 0; i < myInfo.length; i++) {
+  if (typeof myInfo[i] !== "string") continue;
+
+  console.log(myInfo[i], typeof myInfo[i]);
+}
+
+console.log("---BREAK WITH NUMBER---");
+for (let i = 0; i < myInfo.length; i++) {
+  if (typeof myInfo[i] === "number") break;
+
+  console.log(myInfo[i], typeof myInfo[i]);
+}
+
 // * Object Methods
 
 // const aboutMe = {
@@ -143,9 +168,9 @@ console.log(types);
 // console.log(myInfo.length);
 
 // * exercise (arrays)
-// function calcAge1(birthYear) {
-//   return 2023 - birthYear;
-// }
+function calcAge1(birthYear) {
+  return 2023 - birthYear;
+}
 
 // const years = [1971, 1992, 2003, 2023, 2000];
 
