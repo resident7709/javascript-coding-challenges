@@ -12,13 +12,24 @@ const totals = [];
 for (let i = 0; i < bills.length; i++) {
   const tip = calcTip(bills[i]);
 
-  tips.push(+tip.toFixed(2));
-  totals.push(+bills[i] + +tips[i]);
+  tips.push(tip);
+  totals.push(bills[i] + tip);
 }
 
 console.log(bills);
 console.log(tips);
 console.log(totals);
+
+// todo: Bonus
+function calcAverage(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
 
 // *CHALLENGE#3
 
