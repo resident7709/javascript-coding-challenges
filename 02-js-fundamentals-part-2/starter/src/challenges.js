@@ -16,9 +16,9 @@ for (let i = 0; i < bills.length; i++) {
   totals.push(bills[i] + tip);
 }
 
-console.log(bills);
-console.log(tips);
-console.log(totals);
+// console.log(bills);
+// console.log(tips);
+// console.log(totals);
 
 // todo: Bonus
 function calcAverage(arr) {
@@ -29,9 +29,51 @@ function calcAverage(arr) {
   return sum / arr.length;
 }
 
-console.log(calcAverage(totals));
+// console.log(calcAverage(totals));
 
 // *CHALLENGE#3
+// todo: Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+
+const dataMark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi.toFixed(2);
+  },
+};
+
+const dataJohn = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi.toFixed(2);
+  },
+};
+
+function getSummary() {
+  if (dataMark.calcBMI() > dataJohn.calcBMI()) {
+    return `${dataMark.fullName}'s BMI (${dataMark.calcBMI()}) is higher than ${
+      dataJohn.fullName
+    }'s BMI 
+    (${dataJohn.calcBMI()})!`;
+  } else if (dataJohn.calcBMI() > dataMark.calcBMI()) {
+    return `${dataJohn.fullName}'s BMI (${dataJohn.calcBMI()}) is higher than ${
+      dataMark.fullName
+    }'s BMI 
+    (${dataMark.calcBMI()})!`;
+  }
+}
+
+console.log(getSummary());
+
+console.log(+dataMark.bmi.toFixed(2));
+console.log(+dataJohn.bmi.toFixed(2));
 
 // *CHALLENGE#2
 // const calcTip = (bill) =>

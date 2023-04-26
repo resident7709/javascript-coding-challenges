@@ -1,34 +1,33 @@
 // "use strict";
 
 // * While Loop
+// let rep = 1;
 
-let rep = 1;
+// while (rep <= 10) {
+// console.log(`Repetition ${rep}..`);
+//   rep++;
+// }
 
-while (rep <= 10) {
-  // console.log(`Repetition ${rep}..`);
-  rep++;
-}
+// let dice = Math.trunc(Math.random() * 6) + 1;
 
-let dice = Math.trunc(Math.random() * 6) + 1;
-
-while (dice !== 6) {
-  console.log(`You rolled a ${dice}!`);
-  dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice === 6) console.log("Loop is about to end..it's 6!!");
-}
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}!`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log("Loop is about to end..it's 6!!");
+// }
 
 // * For Loop
 // for (let i = 1; i <= 10; i++) {
 //   console.log(`Repetition ${i}..`);
 // }
 
-const aboutMe = {
-  firstName: "Alex",
-  lastName: "Romanov",
-  birthYear: 1971,
-  position: "React-Developer",
-  skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
-};
+// const aboutMe = {
+//   firstName: "Alex",
+//   lastName: "Romanov",
+//   birthYear: 1971,
+//   position: "React-Developer",
+//   skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
+// };
 
 const myInfo = [
   "Alex",
@@ -93,32 +92,33 @@ for (let i = 0; i < years.length; i++) {
 // }
 
 // * Object Methods
+const aboutMe = {
+  firstName: "Alex",
+  lastName: "Romanov",
+  birthYear: 1971,
+  position: "React-Developer",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
+  married: true,
 
-// const aboutMe = {
-//   firstName: "Alex",
-//   lastName: "Romanov",
-//   birthYear: 1971,
-//   position: "React-Developer",
-//   skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
-//   married: true,
+  calcAge: (birthYear) => 2023 - birthYear, // function expression
 
-//   calcAge: (birthYear) => 2023 - birthYear, // function expression
+  calcAge: function () {
+    return 2023 - this.birthYear; // ! this
+  },
 
-//   calcAge: function () {
-//     return 2023 - this.birthYear; // ! this
-//   },
+  calcAge: function () {
+    this.age = 2023 - this.birthYear; // ! using this
+    return this.age;
+  },
 
-//   calcAge: function () {
-//     this.age = 2023 - this.birthYear; // ! using this
-//     return this.age;
-//   },
+  getSummary: function () {
+    return `${this.firstName} is ${this.calcAge()} years old ${
+      this.position
+    }, and he ${this.married ? "is" : "isn't"} married!!🤩`; // ! using ternary operator
+  },
+};
 
-//   getSummary: function () {
-//     return `${this.firstName} is ${this.calcAge()} years old ${
-//       this.position
-//     }, and he ${this.married ? "is" : "isn't"} married!!🤩`; // ! using ternary operator
-//   },
-// };
+// console.log(aboutMe);
 
 // aboutMe.location = "Tver";
 // aboutMe["hobbies"] = "AX training programms";
@@ -200,9 +200,9 @@ for (let i = 0; i < years.length; i++) {
 // console.log(myInfo.length);
 
 // * exercise (arrays)
-function calcAge1(birthYear) {
-  return 2023 - birthYear;
-}
+// function calcAge1(birthYear) {
+//   return 2023 - birthYear;
+// }
 
 // const years = [1971, 1992, 2003, 2023, 2000];
 
