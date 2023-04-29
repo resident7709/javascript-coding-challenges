@@ -1,21 +1,63 @@
 "use strict";
 
-// * Call Stack: Global execution, first() called, second() called, second() returns, first() returns, back to Global..
+// * Scope Chain vs Call Stack
+const a = "Alex";
 
-const nameFirst = "Alex"; // * Global Execution => Call Stack
+first();
 
-const first = () => {
-  let a = 1;
-  const b = second(7, 9);
-  a += b;
-  return a;
-};
+function first() {
+  const b = "Hello!";
+  second();
 
-function second(x, y) {
-  var c = 2;
-  return c;
+  function second() {
+    const c = "Hi!";
+    third();
+  }
 }
 
-const x = first();
+function third() {
+  const d = "Hey!";
 
-console.log(x);
+  console.log(d + c + b + a);
+}
+
+// const myName = "Alex Romanov";
+
+// function first() {
+//   const age = 52;
+
+//   if (age >= 30) {
+//     const decade = 5;
+//     var yogin = true;
+//   }
+
+//   function second() {
+//     const job = "react-developer";
+
+//     console.log(`${myName} is a ${age}-year-old ${job}!!💰✨`);
+//   }
+
+//   second();
+// }
+
+// first();
+
+// * Call Stack: Global execution, first() called, second() called, second() returns, first() returns, back to Global..
+
+// const nameFirst = "Alex"; // * Global Execution => Call Stack
+
+// const first = () => {
+//   let a = 1;
+//   const b = second(7, 9);
+//   a += b;
+//   return a;
+// };
+
+// function second(x, y) {
+//   var c = 2;
+//   return c;
+// }
+
+// const x = first();
+
+// console.log(x);
