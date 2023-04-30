@@ -1,18 +1,30 @@
 "use strict";
 
+// * Scope Chain vs Call Stack
 function calcAge(birthYear) {
   const age = 2023 - birthYear;
 
   function printAge() {
-    const output = `${firstName} ${age} years old, and born in ${birthYear}..`;
+    let output = `${firstName} ${age} years old, and born in ${birthYear}..`;
     console.log(output);
 
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
+      const firstName = " Steven"; // ! new var
+      output = "NEW OUTPUT!!"; // ! reassigned var
+
       const str = `..you're a millenial, ${firstName}!`;
       console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
+
+      console.log(firstName);
+      console.log(output);
     }
     console.log(millenial);
+    // console.log(add(2, 3)); // * under strict mode
   }
   printAge();
 
@@ -23,7 +35,6 @@ const firstName = "Jonas";
 
 calcAge(1991);
 
-// * Scope Chain vs Call Stack
 // const myName = "Alex Romanov";
 
 // function first() {
