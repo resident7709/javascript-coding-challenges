@@ -1,6 +1,43 @@
 "use strict";
 
 // * this keyword
+// console.log(this); // * global window object
+
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
+
+// calcAge(1991);
+
+// const calcAge1 = birthYear => {
+//   console.log(2037 - birthYear);
+//   console.log(this); // * global window object in arrow(parent) function, lexical this keyword..
+// };
+
+// calcAge1(1992);
+
+const jonas = {
+  name: "Jonas",
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+
+jonas.calcAge();
+
+const matilda = {
+  name: "Matilda",
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+
+const f = jonas.calcAge;
+// f(); // ! cannot read properties of undefined (reading 'year')
 
 // * Hoisting and TDZ
 // * Vars
