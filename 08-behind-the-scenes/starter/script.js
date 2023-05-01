@@ -2,24 +2,42 @@
 
 // * Primitives vs Objects
 
-// let age = 30;
-// let oldAge = age;
-// age = 31;
+// * primitive types
+// let lastName = "Williams";
+// let oldLastName = lastName;
+// lastName = "Davis";
 
-// console.log(age);
-// console.log(oldAge);
+// console.log(lastName, oldLastName);
 
-// const jonas = {
-//   name: "Jonas",
-//   age: 30,
+// * reference types
+// const jessica = {
+//   firstName: "Jessica",
+//   lastName: "Williams",
+//   age: 27,
 // };
 
-// const kai = jonas;
-// kai.name = "Kai";
-// kai.age = 37;
+// const marriedJessica = jessica;
+// marriedJessica.lastName = "Davis";
 
-// console.log("Jonas:", jonas);
-// console.log("Kai:", kai);
+// console.log(jessica);
+// console.log(marriedJessica);
+
+// * copying objects
+const jessica2 = {
+  firstName: "Jessica",
+  lastName: "Williams",
+  age: 27,
+  family: ["Alice", "Bob"],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = "Davis";
+
+jessicaCopy.family.push("Mary");
+jessicaCopy.family.push("John");
+
+console.log(jessica2);
+console.log(jessicaCopy);
 
 // * Regular Functions vs Arrow Functions
 // const jonas = {
