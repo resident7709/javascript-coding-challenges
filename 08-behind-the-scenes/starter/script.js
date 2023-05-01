@@ -1,5 +1,54 @@
 "use strict";
 
+// * Regular Functions vs Arrow Functions
+// const jonas = {
+//   name: "Jonas",
+//   year: 1991,
+//   calcAge: function () {
+// console.log(this);
+//     console.log(2037 - this.year);
+
+// * Solution 1
+// const self = this; // * self or that
+// const isMillenial = function () {
+//   console.log(self);
+//   console.log(self.year >= 1981 && self.year <= 1996);
+// };
+
+// * Solution 2
+//     const isMillenial = () => {
+//       console.log(this); // * this keyword from parent scope
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+
+//     isMillenial();
+//   },
+
+//   greet: () => {
+//     console.log(this);
+//     console.log(`Hey ${this.name}!`);
+//   },
+// };
+
+// jonas.greet();
+// jonas.calcAge();
+
+// * arguments keyword
+// const addExpr = function (a, b) {
+//   console.log(arguments); // * only for regular functions
+//   return a + b;
+// };
+
+// addExpr(2, 5);
+// addExpr(2, 5, 2, 16);
+
+// const addArrow = (a, b) => {
+//     console.log(arguments); // ! RefereneError..
+//   return a + b;
+// };
+
+// console.log(addArrow(1, 2));
+
 // * this keyword
 // console.log(this); // * global window object
 
@@ -17,26 +66,26 @@
 
 // calcAge1(1992);
 
-const jonas = {
-  name: "Jonas",
-  year: 1991,
-  calcAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
-  },
-};
+// const jonas = {
+//   name: "Jonas",
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
 
-jonas.calcAge();
+// jonas.calcAge();
 
-const matilda = {
-  name: "Matilda",
-  year: 2017,
-};
+// const matilda = {
+//   name: "Matilda",
+//   year: 2017,
+// };
 
-matilda.calcAge = jonas.calcAge;
-matilda.calcAge();
+// matilda.calcAge = jonas.calcAge;
+// matilda.calcAge();
 
-const f = jonas.calcAge;
+// const f = jonas.calcAge; // ! cannot take this.year from jonas.calcAge
 // f(); // ! cannot read properties of undefined (reading 'year')
 
 // * Hoisting and TDZ
@@ -47,7 +96,7 @@ const f = jonas.calcAge;
 
 // console.log(x === window.x);
 // console.log(y === window.y);
-// console.log(z === window.z);
+// console.log6pooooool(z === window.z);
 
 // console.log(firstName);
 // console.log(job);
