@@ -42,48 +42,101 @@ const restaurant = {
       at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
 };
+
+// * Spread Operator
+// const ingredients = [
+//   prompt(`Let's make pasta! Ingredient 1?`),
+//   prompt(`Ingredient 2?`),
+//   prompt(`Ingredient 3?`),
+// ];
+
+// console.log(ingredients);
+
+// restaurant.orderPasta(...ingredients);
+
+// const arr = [7, 8, 9];
+// const arrSpread = [1, 2, ...arr];
+
+// console.log(arrSpread);
+// console.log(...arrSpread);
+
+// const newMenu = [...restaurant.mainMenu, "Gnocci"];
+// console.log(newMenu);
+
+// * (...) with Objects
+// const newRestaurant = {
+//   foundedIn: 1987,
+//   ...restaurant,
+//   founder: "Giuseppe Mondolini",
+// };
+
+// console.log(newRestaurant);
+
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = "Viva Roma!!";
+
+// console.log(restaurantCopy.name);
+// console.log(restaurant.name);
+
+// * copying array
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
+
+// * joining arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// * Iterables: arrays, strings, maps, sets..but NOT objects!
+// const str = "Jonas";
+// const letters = [...str, " ", "S."];
+// console.log(letters);
+// console.log(...str);
 
 // * Destructuring Objects
 
-restaurant.orderDelivery({
-  time: "22:30",
-  address: "Via del Sole, 21",
-  mainInd: 2,
-  starterInd: 2,
-});
-restaurant.orderDelivery({
-  // time: "22:30", // * default value
-  address: "Via del Sole, 21",
-  // mainInd: 2, // * default value
-  starterInd: 3,
-});
+// restaurant.orderDelivery({
+//   time: "22:30",
+//   address: "Via del Sole, 21",
+//   mainInd: 2,
+//   starterInd: 2,
+// });
+// restaurant.orderDelivery({
+//   time: "22:30", // * default value
+//   address: "Via del Sole, 21",
+//   mainInd: 2, // * default value
+//   starterInd: 3,
+// });
 
-const { name, openingHours, categories } = restaurant;
+// const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
 // console.log(restaurantName, hours, tags);
 
 // * default values
-const { menu = [], starterMenu: starters = [] } = restaurant;
+// const { menu = [], starterMenu: starters = [] } = restaurant;
 // console.log(menu, starters);
 
 // * mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 9, b: 8, c: 14 };
-({ a, b } = obj);
+// let a = 111;
+// let b = 999;
+// const obj = { a: 9, b: 8, c: 14 };
+// ({ a, b } = obj);
 // console.log(a, b);
 
 // * nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
 // console.log(o, c);
 
 // * Destructuring Arrays
