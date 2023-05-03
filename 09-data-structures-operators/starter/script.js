@@ -56,7 +56,6 @@ const restaurant = {
 // * Modern Operators
 
 // * Logical Assignment Operators
-
 // const rest1 = {
 //   name: "Capri",
 //   numGuests: 0,
