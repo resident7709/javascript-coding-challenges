@@ -55,8 +55,35 @@ const restaurant = {
 
 // * Modern Operators
 
+// * Logical Assignment Operators
+
+// const rest1 = {
+//   name: "Capri",
+//   numGuests: 0,
+// };
+
+// const rest2 = {
+//   name: "La Piazza",
+//   owner: "Paolo Rossi",
+// };
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+// * OR Assignment Operator
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+// * Nullish Assignment Operator (null or undefined)
+// rest1.numGuests ??= 10; // ! 0 - truthy
+// rest2.numGuests ??= 10; // ! undefined - falthy
+// * AND Assignment Operator
+// rest1.owner &&= "<ANONYMOUS>";
+// rest2.owner &&= "<ANONYMOUS>";
+
+// console.log(rest1);
+// console.log(rest2);
+
 // * Nullish Coalescing Operator (??)
-console.log("--- ?? NCO ---");
+// console.log("--- ?? NCO ---");
 
 // restaurant.numGuests = 0;
 
@@ -68,7 +95,7 @@ console.log("--- ?? NCO ---");
 // console.log(guestCorrect);
 
 // * use ANY data type, return ANY data type, short-circuiting
-console.log("--- || OR ---"); // ! takes first truthy value or last value if all of them falthy, looks for truthy..
+// console.log("--- || OR ---"); // ! takes first truthy value or last value if all of them falthy, looks for truthy..
 // console.log(3 || "jonas");
 // console.log("" || "jonas");
 // console.log(true || 0);
@@ -82,7 +109,7 @@ console.log("--- || OR ---"); // ! takes first truthy value or last value if all
 // const guests2 = restaurant.numGuests || 10;
 // console.log(guests2);
 
-console.log("--- && AND ---"); // ! takes first falthy value or last value if all of them truthy, looks for falthy..
+// console.log("--- && AND ---"); // ! takes first falthy value or last value if all of them truthy, looks for falthy..
 // console.log(0 && "String");
 // console.log(7 && "String");
 // console.log("string" && 723 && null && "String");
