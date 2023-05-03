@@ -53,6 +53,47 @@ const restaurant = {
   },
 };
 
+// * Modern Operators
+
+// * Nullish Coalescing Operator (??)
+console.log("--- ?? NCO ---");
+
+// restaurant.numGuests = 0;
+
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
+
+// * Nullish: null and undefined (NOT 0 or "")
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
+// * use ANY data type, return ANY data type, short-circuiting
+console.log("--- || OR ---"); // ! takes first truthy value or last value if all of them falthy, looks for truthy..
+// console.log(3 || "jonas");
+// console.log("" || "jonas");
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || "" || "Hello" || 23 || null);
+
+// restaurant.numGuests = 123;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+console.log("--- && AND ---"); // ! takes first falthy value or last value if all of them truthy, looks for falthy..
+// console.log(0 && "String");
+// console.log(7 && "String");
+// console.log("string" && 723 && null && "String");
+
+// * practical example
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza("mushrooms", "spinach");
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza("cheese", "garlic");
+
 // * Rest Pattern
 // restaurant.orderPizza("mushrooms", "onion", "spinach", "olives");
 // restaurant.orderPizza("cheese");
