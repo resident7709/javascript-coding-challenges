@@ -41,6 +41,8 @@ const game = {
   },
 };
 
+// * CHALLENGE#2
+
 // * CHALLENGE#1
 // todo: 1.Create one player array for each team (variables 'players1' and 'players2')..
 const [players1, players2] = game.players;
