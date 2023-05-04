@@ -53,6 +53,42 @@ const restaurant = {
   },
 };
 
+// * MAPS
+
+// * SETS
+// const ordersSet = new Set([
+//   "Pasta",
+//   "Pizza",
+//   "Pizza",
+//   "Risotto",
+//   "Pasta",
+//   "Pizza",
+// ]);
+
+// ordersSet.add("Garlic Bread");
+// ordersSet.add("Garlic Bread");
+// ordersSet.delete("Risotto");
+// ordersSet.clear();
+
+// for (const order of ordersSet) console.log(order);
+
+// console.log(ordersSet);
+// console.log(new Set("Lola"));
+// console.log(new Set());
+// console.log(ordersSet.size);
+// console.log(ordersSet.has("Pizza"));
+// console.log(ordersSet.has("Bread"));
+
+// * Set example
+// const staff = ["waiter", "chef", "waiter", "manager", "chef", "waiter"];
+
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+// console.log(
+//   new Set(["waiter", "chef", "waiter", "manager", "chef", "waiter"]).size
+// );
+// console.log(new Set("Lola").size);
+
 // * Looping Objects
 
 // * Property NAMES
