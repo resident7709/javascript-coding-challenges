@@ -1,59 +1,114 @@
 "use strict";
 
 // * Data needed for a later exercise
-// const flights =
-//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+const flights =
+  "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+
+// * WORKING WITH STRINGS
+const airline = "TAP Air Portugal";
+const plane = "A320";
+
+// console.log(plane[0]);
+// console.log("B737"[0]);
+// console.log(airline.length);
+// console.log("B737".length);
+// * Methods
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+
+// * Fix Capitalization
+// const passenger = "jOnAS"; // * => Jonas
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+const checkPassenger = function (passenger) {
+  const passengerLower = passenger.toLowerCase();
+  const passengerCorrect =
+    passengerLower[0].toUpperCase() + passengerLower.slice(1);
+  console.log(passengerCorrect);
+};
+
+checkPassenger("jONAS");
+
+// * User email check
+
+// console.log(airline.indexOf("r"));
+// console.log(airline.indexOf("Portugal"));
+// console.log(airline.lastIndexOf("r"));
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+// console.log(airline.slice(0, airline.indexOf(" ")));
+// console.log(airline.slice(airline.indexOf(" ") + 1));
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -2));
+
+// const checkMiddleSeat = function (seat) {
+// * B and E are middle seats
+//   const s = seat.slice(-1);
+//   if (s === "B" || s === "E") console.log("You got the middle seat..");
+//   else console.log("You got lucky!!");
+// };
+
+// checkMiddleSeat("11B");
+// checkMiddleSeat("23C");
+// checkMiddleSeat("3E");
+
+// * Boxing..
+// console.log(new String("Lola"));
+// console.log(typeof new String("Lola"));
+// console.log(typeof new String("Lola").slice(1));
 
 // * Data needed for first part of the section
-const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
-const openingHours = {
-  // * ES6 Enhanced Object Literals
-  [weekdays[3]]: {
-    open: 12,
-    close: 22,
-  },
-  [weekdays[4]]: {
-    open: 11,
-    close: 23,
-  },
-  [weekdays[5]]: {
-    open: 0, // Open 24 hours
-    close: 12 + 12,
-  },
-};
+// const openingHours = {
+// * ES6 Enhanced Object Literals
+//   [weekdays[3]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   [weekdays[4]]: {
+//     open: 11,
+//     close: 23,
+//   },
+//   [weekdays[5]]: {
+//     open: 0, // Open 24 hours
+//     close: 12 + 12,
+//   },
+// };
 
-const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  // * ES6 Enhanced Object Literals
-  openingHours,
-  // * ES6 Enhanced Object Literals, no function word needed..
-  order(starterInd, mainInd) {
-    return [this.starterMenu[starterInd], this.mainMenu[mainInd]];
-  },
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "Via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+// * ES6 Enhanced Object Literals
+//   openingHours,
+// * ES6 Enhanced Object Literals, no function word needed..
+//   order(starterInd, mainInd) {
+//     return [this.starterMenu[starterInd], this.mainMenu[mainInd]];
+//   },
 
-  orderDelivery({ starterInd = 1, mainInd = 0, time = "20:00", address }) {
-    console.log(
-      `Order received! ${this.starterMenu[starterInd]} and ${this.mainMenu[mainInd]} will be delivered to ${address}
-      at ${time}`
-    );
-  },
+//   orderDelivery({ starterInd = 1, mainInd = 0, time = "20:00", address }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterInd]} and ${this.mainMenu[mainInd]} will be delivered to ${address}
+//       at ${time}`
+//     );
+//   },
 
-  orderPasta(ing1, ing2, ing3) {
-    console.log(`Pasta with ${ing1}, ${ing2} and ${ing3}`);
-  },
+//   orderPasta(ing1, ing2, ing3) {
+//     console.log(`Pasta with ${ing1}, ${ing2} and ${ing3}`);
+//   },
 
-  orderPizza(mainIngr, ...otherIngrs) {
-    console.log(mainIngr);
-    console.log(otherIngrs);
-  },
-};
-
-// * Working with Strings
+//   orderPizza(mainIngr, ...otherIngrs) {
+//     console.log(mainIngr);
+//     console.log(otherIngrs);
+//   },
+// };
 
 // * MAPS Iteration
 // const question = new Map([
