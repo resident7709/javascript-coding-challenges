@@ -41,6 +41,9 @@ const game = {
   },
 };
 
+// * CHALLENGE#3
+// todo: 1. Create an array 'events' of the different game events that happened (no duplicates)
+
 // * CHALLENGE#2
 // todo: 1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
 // console.log("1. ==============================");
@@ -48,8 +51,8 @@ const game = {
 // for (let i = 0; i < game.scored.length; i++)
 //   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
 // * for of..destructuring..
-for (const [i, player] of game.scored.entries())
-  console.log(`Goal ${i + 1}: ${player}`);
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
 
 // todo: 2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
 // console.log("2. ==============================");
