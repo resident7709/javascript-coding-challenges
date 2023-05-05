@@ -53,16 +53,18 @@ const restaurant = {
   },
 };
 
+// * Working with Strings
+
 // * MAPS Iteration
-const question = new Map([
-  ["question", "..best progLanguage in the world?"],
-  [1, "C"],
-  [2, "Java"],
-  [3, "JavaScript!!"],
-  ["correct answer", 3],
-  [true, "Correct!!"],
-  [false, "Not correct.."],
-]);
+// const question = new Map([
+//   ["question", "..best progLanguage in the world?"],
+//   [1, "C"],
+//   [2, "Java"],
+//   [3, "JavaScript!!"],
+//   ["correct answer", 3],
+//   [true, "Correct!!"],
+//   [false, "Not correct.."],
+// ]);
 
 // console.log(question);
 
