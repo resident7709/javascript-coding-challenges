@@ -5,8 +5,8 @@ const flights =
   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // * WORKING WITH STRINGS
-const airline = "TAP Air Portugal";
-const plane = "A320";
+// const airline = "TAP Air Portugal";
+// const plane = "A320";
 
 // console.log(plane[0]);
 // console.log("B737"[0]);
@@ -16,6 +16,40 @@ const plane = "A320";
 // console.log(airline.toLowerCase());
 // console.log(airline.toUpperCase());
 
+// * Replacing
+// const priceGB = "288,97£";
+// const priceUS = priceGB.replace("£", "$").replace(",", ".");
+
+// const announcement =
+//   "All passengers come to boarding door 23! Boarding door 23!!";
+
+// console.log(priceUS);
+// console.log(announcement.replace("door", "gate"));
+// console.log(announcement.replace(/door/g, "gate")); // * old way RegEx..
+// console.log(announcement.replaceAll("door", "gate")); // * new way 'replaceAll'..
+
+// * Booleans
+// const plane = "Airbus A320neo";
+
+// console.log(plane.includes("A320"));
+// console.log(plane.includes("TU-134"));
+// console.log(plane.startsWith("Air"));
+
+// if (plane.startsWith("Airbus") && plane.endsWith("neo"))
+//   console.log("NEW Airbus!!");
+
+// * Practise exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  baggage.includes("knife") || baggage.includes("gun")
+    ? console.log("You're NOT allowed on board!")
+    : console.log("Welcome aboard!");
+};
+
+checkBaggage("I have a laptop, some Food and pocket Knife..");
+checkBaggage("I have some socks and camera..");
+checkBaggage("I have some snacks and a gun for protection..");
+
 // * Fix Capitalization
 // const passenger = "jOnAS"; // * => Jonas
 // const passengerLower = passenger.toLowerCase();
@@ -23,16 +57,25 @@ const plane = "A320";
 //   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 // console.log(passengerCorrect);
 
-const checkPassenger = function (passenger) {
-  const passengerLower = passenger.toLowerCase();
-  const passengerCorrect =
-    passengerLower[0].toUpperCase() + passengerLower.slice(1);
-  console.log(passengerCorrect);
-};
+// const checkPassenger = function (passenger) {
+//   const passengerLower = passenger.toLowerCase();
+//   const passengerCorrect =
+//     passengerLower[0].toUpperCase() + passengerLower.slice(1);
+//   console.log(passengerCorrect);
+// };
 
-checkPassenger("jONAS");
+// checkPassenger("jONAS");
 
-// * User email check
+// * Comparing emails
+// const email = "passenger@gmail.com";
+// const loginEmail = " Passenger@Gmail.Com \n";
+
+// const emailNorm = (mail1, mail2) => {
+//   const normalizedEmail = mail2.toLowerCase().trim();
+//   console.log(mail1 === normalizedEmail);
+// };
+
+// emailNorm(email, loginEmail);
 
 // console.log(airline.indexOf("r"));
 // console.log(airline.indexOf("Portugal"));
