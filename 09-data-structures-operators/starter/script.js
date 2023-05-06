@@ -12,7 +12,59 @@ const flights =
 // console.log("B737"[0]);
 // console.log(airline.length);
 // console.log("B737".length);
-// * Methods
+// * METHODS
+
+// * Repeat
+// const message2 = "Bad Weather...All Departures Delayed...🌧 ";
+
+// console.log(message2.repeat(5));
+
+// const planesInLine = n =>
+//   console.log(`There are ${n} planes in line ${"✈".repeat(n)}`);
+
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+
+// * Padding
+// const message = " Go to gate 23!";
+
+// console.log(message.padStart(25, "~ ").padEnd(35, " ~"));
+
+// const maskCreditCard = function (number) {
+//   const str = number + ""; // * num to string
+//   const last = str.slice(-4); // * last 4 symbols
+
+//   return last.padStart(str.length, "*");
+// };
+
+// console.log(maskCreditCard(78971342658625));
+// console.log(maskCreditCard(789765862));
+
+// * Split and Join
+// console.log("a+very+nice+string".split("+"));
+// console.log("Alexei Romanov".split(" "));
+
+// const [firstName, lastName] = "Alexei Romanov".split(" ");
+// const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+
+// const capitalizeName = function (name) {
+//   const names = name.split(" ");
+//   const namesUpper = [];
+
+//   for (const n of names) {
+//     namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join(" "));
+// };
+
+// capitalizeName("jessica ann smith davis");
+// capitalizeName("jonas schmedtmann");
+
+// console.log(newName);
+// console.log(firstName, lastName);
+
 // console.log(airline.toLowerCase());
 // console.log(airline.toUpperCase());
 
@@ -39,16 +91,16 @@ const flights =
 //   console.log("NEW Airbus!!");
 
 // * Practise exercise
-const checkBaggage = function (items) {
-  const baggage = items.toLowerCase();
-  baggage.includes("knife") || baggage.includes("gun")
-    ? console.log("You're NOT allowed on board!")
-    : console.log("Welcome aboard!");
-};
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   baggage.includes("knife") || baggage.includes("gun")
+//     ? console.log("You're NOT allowed on board!")
+//     : console.log("Welcome aboard!");
+// };
 
-checkBaggage("I have a laptop, some Food and pocket Knife..");
-checkBaggage("I have some socks and camera..");
-checkBaggage("I have some snacks and a gun for protection..");
+// checkBaggage("I have a laptop, some Food and pocket Knife..");
+// checkBaggage("I have some socks and camera..");
+// checkBaggage("I have some snacks and a gun for protection..");
 
 // * Fix Capitalization
 // const passenger = "jOnAS"; // * => Jonas
