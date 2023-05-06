@@ -4,35 +4,36 @@
 document.body.append(document.createElement("textarea"));
 document.body.append(document.createElement("button"));
 
-document.querySelector("button").addEventListener("click", () => {
-  const text = document.querySelector("textarea").value;
-  const rows = text.split("\n");
+// document.querySelector("button").addEventListener("click", () => {
+//   const text = document.querySelector("textarea").value;
+//   const rows = text.split("\n");
 
-  for (const [i, row] of rows.entries()) {
-    // * arrow function + ternary operator
-    // console.log(
-    //   row
-    //     .toLowerCase()
-    //     .trim()
-    //     .split("_")
-    //     .map((first, second) =>
-    //       second == 0 ? first : first[0].toUpperCase() + first.slice(1)
-    //     )
-    //     .join()
-    //     .replaceAll(",", "")
-    // );
+// * destructuring
+//   for (const [i, row] of rows.entries()) {
+// * destructuring
+//     const [first, second] = row.toLowerCase().trim().split("_");
 
-    // * destructuring
-    const [first, second] = row.toLowerCase().trim().split("_");
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
 
-    const output = `${first}${second.replace(
-      second[0],
-      second[0].toUpperCase()
-    )}`;
+//     console.log(`${output.padEnd(20)}${"✅".repeat(i + 1)}`);
+//   }
+// });
 
-    console.log(`${output.padEnd(20)}${"✅".repeat(i + 1)}`);
-  }
-});
+// * arrow function + ternary operator
+// console.log(
+//   row
+//     .toLowerCase()
+//     .trim()
+//     .split("_")
+//     .map((first, second) =>
+//       second == 0 ? first : first[0].toUpperCase() + first.slice(1)
+//     )
+//     .join()
+//     .replaceAll(",", "")
+// );
 
 // * =================================================== * //
 const game = {
