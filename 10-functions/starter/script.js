@@ -1,6 +1,6 @@
 "use strict";
 
-// * CALL and APPLY Methods
+// * CALL, APPLY, BIND Methods
 const lufthansa = {
   airline: "Lufthansa",
   iataCode: "LH",
@@ -44,13 +44,67 @@ const swiss = {
 book.call(swiss, 493, "Monica Portraite");
 
 // * Apply Method
-const flightData = [493, "George Copper"];
+// const flightData = [493, "George Copper"];
 // book.apply(swiss, flightData); // * vanilla way..
-book.call(swiss, ...flightData); // * ES6 way..spread operator
+// book.call(swiss, ...flightData); // * ES6 way..spread operator
 
-console.log(swiss);
+// console.log(swiss);
 
-// * BIND Method
+// * Bind Method
+// book.call(eurowings, 23, "Sarah Williams");
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(23, "Steven Portfolio");
+bookLH(239, "Gilfoile Noise");
+
+const bookEW23 = book.bind(eurowings, 23);
+
+bookEW23("Alexei Romanov");
+bookEW23("Artur Romanov");
+
+// * Bind with Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector(".buy")
+  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
+
+// * Partial Application
+const addTax = (rate, value) => value + value * rate;
+
+// console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23); // * addVAT = value => value + value * 0.23;
+
+// console.log(addVAT(100));
+// console.log(addVAT(1000500));
+
+const addTaxBasic = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT2 = addTaxBasic(0.15);
+
+console.log(addVAT2(100));
+console.log(addVAT2(23));
+
+const addTaxRate = rate => value => value + value * rate;
+
+const addVAT3 = addTaxRate(0.23);
+
+console.log(addVAT3(100));
+console.log(addVAT3(23));
 
 // * Functions Returning Functions
 // const greet = greeting => name => console.log(`${greeting} ${name}`); // * Arrows Cool!!
