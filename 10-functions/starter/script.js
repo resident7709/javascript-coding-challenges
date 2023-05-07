@@ -1,14 +1,66 @@
 "use strict";
 
+// * CALL and APPLY Methods
+const lufthansa = {
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
+  book(flightNum, passName) {
+    console.log(
+      `${passName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, passName });
+  },
+};
+
+lufthansa.book(239, "John Doe");
+lufthansa.book(635, "Karl Vesely");
+
+const eurowings = {
+  airline: "Eurowings",
+  iataCode: "EW",
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// book(23, "Sarah Williams"); // ! Does NOT work because this keyword..
+
+// * Call Method
+book.call(lufthansa, 239, "Maxim Kuppelweiser");
+
+console.log(lufthansa);
+
+book.call(eurowings, 23, "Sarah Williams");
+
+console.log(eurowings);
+
+const swiss = {
+  airline: "Swiss AirLines",
+  iataCode: "LX",
+  bookings: [],
+};
+
+book.call(swiss, 493, "Monica Portraite");
+
+// * Apply Method
+const flightData = [493, "George Copper"];
+// book.apply(swiss, flightData); // * vanilla way..
+book.call(swiss, ...flightData); // * ES6 way..spread operator
+
+console.log(swiss);
+
+// * BIND Method
+
 // * Functions Returning Functions
-const greet = greeting => name => console.log(`${greeting} ${name}`); // * Arrows Cool!!
+// const greet = greeting => name => console.log(`${greeting} ${name}`); // * Arrows Cool!!
 
-console.log();
-const greeterHey = greet("Hey!!");
-greeterHey("Alex");
-greeterHey("Anna");
+// console.log();
+// const greeterHey = greet("Hey!!");
+// greeterHey("Alex");
+// greeterHey("Anna");
 
-greet("Hi,")("Jonas");
+// greet("Hi,")("Jonas");
 
 // * Callback Functions
 // const oneWord = str => str.replace(/ /g, "").toLowerCase();
