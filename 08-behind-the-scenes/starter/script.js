@@ -23,21 +23,21 @@
 // console.log(marriedJessica);
 
 // * copying objects
-const jessica2 = {
-  firstName: "Jessica",
-  lastName: "Williams",
-  age: 27,
-  family: ["Alice", "Bob"],
-};
+// const jessica2 = {
+//   firstName: "Jessica",
+//   lastName: "Williams",
+//   age: 27,
+//   family: ["Alice", "Bob"],
+// };
 
-const jessicaCopy = Object.assign({}, jessica2);
-jessicaCopy.lastName = "Davis";
+// const jessicaCopy = Object.assign({}, jessica2);
+// jessicaCopy.lastName = "Davis";
 
-jessicaCopy.family.push("Mary");
-jessicaCopy.family.push("John");
+// jessicaCopy.family.push("Mary");
+// jessicaCopy.family.push("John");
 
-console.log(jessica2);
-console.log(jessicaCopy);
+// console.log(jessica2);
+// console.log(jessicaCopy);
 
 // * Regular Functions vs Arrow Functions
 // const jonas = {
