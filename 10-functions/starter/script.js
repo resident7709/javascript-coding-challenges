@@ -1,47 +1,47 @@
 "use strict";
 
 // * CALL, APPLY, BIND Methods
-const lufthansa = {
-  airline: "Lufthansa",
-  iataCode: "LH",
-  bookings: [],
-  book(flightNum, passName) {
-    console.log(
-      `${passName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
-    );
-    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, passName });
-  },
-};
+// const lufthansa = {
+//   airline: "Lufthansa",
+//   iataCode: "LH",
+//   bookings: [],
+//   book(flightNum, passName) {
+//     console.log(
+//       `${passName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+//     );
+//     this.bookings.push({ flight: `${this.iataCode}${flightNum}`, passName });
+//   },
+// };
 
-lufthansa.book(239, "John Doe");
-lufthansa.book(635, "Karl Vesely");
+// lufthansa.book(239, "John Doe");
+// lufthansa.book(635, "Karl Vesely");
 
-const eurowings = {
-  airline: "Eurowings",
-  iataCode: "EW",
-  bookings: [],
-};
+// const eurowings = {
+//   airline: "Eurowings",
+//   iataCode: "EW",
+//   bookings: [],
+// };
 
-const book = lufthansa.book;
+// const book = lufthansa.book;
 
 // book(23, "Sarah Williams"); // ! Does NOT work because this keyword..
 
 // * Call Method
-book.call(lufthansa, 239, "Maxim Kuppelweiser");
+// book.call(lufthansa, 239, "Maxim Kuppelweiser");
 
-console.log(lufthansa);
+// console.log(lufthansa);
 
-book.call(eurowings, 23, "Sarah Williams");
+// book.call(eurowings, 23, "Sarah Williams");
 
-console.log(eurowings);
+// console.log(eurowings);
 
-const swiss = {
-  airline: "Swiss AirLines",
-  iataCode: "LX",
-  bookings: [],
-};
+// const swiss = {
+//   airline: "Swiss AirLines",
+//   iataCode: "LX",
+//   bookings: [],
+// };
 
-book.call(swiss, 493, "Monica Portraite");
+// book.call(swiss, 493, "Monica Portraite");
 
 // * Apply Method
 // const flightData = [493, "George Copper"];
@@ -53,58 +53,58 @@ book.call(swiss, 493, "Monica Portraite");
 // * Bind Method
 // book.call(eurowings, 23, "Sarah Williams");
 
-const bookEW = book.bind(eurowings);
-const bookLH = book.bind(lufthansa);
-const bookLX = book.bind(swiss);
+// const bookEW = book.bind(eurowings);
+// const bookLH = book.bind(lufthansa);
+// const bookLX = book.bind(swiss);
 
-bookEW(23, "Steven Portfolio");
-bookLH(239, "Gilfoile Noise");
+// bookEW(23, "Steven Portfolio");
+// bookLH(239, "Gilfoile Noise");
 
-const bookEW23 = book.bind(eurowings, 23);
+// const bookEW23 = book.bind(eurowings, 23);
 
-bookEW23("Alexei Romanov");
-bookEW23("Artur Romanov");
+// bookEW23("Alexei Romanov");
+// bookEW23("Artur Romanov");
 
 // * Bind with Event Listeners
-lufthansa.planes = 300;
-lufthansa.buyPlane = function () {
-  console.log(this);
+// lufthansa.planes = 300;
+// lufthansa.buyPlane = function () {
+//   console.log(this);
 
-  this.planes++;
-  console.log(this.planes);
-};
+//   this.planes++;
+//   console.log(this.planes);
+// };
 
-document
-  .querySelector(".buy")
-  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
+// document
+//   .querySelector(".buy")
+//   .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
 
 // * Partial Application
-const addTax = (rate, value) => value + value * rate;
+// const addTax = (rate, value) => value + value * rate;
 
 // console.log(addTax(0.1, 200));
 
-const addVAT = addTax.bind(null, 0.23); // * addVAT = value => value + value * 0.23;
+// const addVAT = addTax.bind(null, 0.23); // * addVAT = value => value + value * 0.23;
 
 // console.log(addVAT(100));
 // console.log(addVAT(1000500));
 
-const addTaxBasic = function (rate) {
-  return function (value) {
-    return value + value * rate;
-  };
-};
+// const addTaxBasic = function (rate) {
+//   return function (value) {
+//     return value + value * rate;
+//   };
+// };
 
-const addVAT2 = addTaxBasic(0.15);
+// const addVAT2 = addTaxBasic(0.15);
 
-console.log(addVAT2(100));
-console.log(addVAT2(23));
+// console.log(addVAT2(100));
+// console.log(addVAT2(23));
 
-const addTaxRate = rate => value => value + value * rate;
+// const addTaxRate = rate => value => value + value * rate;
 
-const addVAT3 = addTaxRate(0.23);
+// const addVAT3 = addTaxRate(0.23);
 
-console.log(addVAT3(100));
-console.log(addVAT3(23));
+// console.log(addVAT3(100));
+// console.log(addVAT3(23));
 
 // * Functions Returning Functions
 // const greet = greeting => name => console.log(`${greeting} ${name}`); // * Arrows Cool!!
