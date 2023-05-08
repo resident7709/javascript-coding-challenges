@@ -1,5 +1,36 @@
 "use strict";
 
+// * CLOSURES
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+
+console.dir(booker);
+
+// * IIFE
+// const runOnce = function () {
+//   console.log("No more..");
+// };
+
+// runOnce();
+
+// (function () {
+//   console.log("No more tears..😇");
+// })(); // * IIFE
+
+// (() => console.log("No more tears..😍 => arrow IIFE"))();
+
 // * CALL, APPLY, BIND Methods
 // const lufthansa = {
 //   airline: "Lufthansa",
