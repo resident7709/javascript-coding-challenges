@@ -1,6 +1,35 @@
 "use strict";
 
+// const currencies = new Map([
+//   ["USD", "United States dollar"],
+//   ["EUR", "Euro"],
+//   ["GBP", "Pound sterling"],
+// ]);
+
+// * .forEach WITH Maps AND Sets
+
 // * LOOPING ARRAYS .forEach
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const movement of movements) {
+// * The entries() method returns a new array iterator object that contains the key/value pairs for each index in the array
+// for (const [i, movement] of movements.entries()) {
+//   if (movement > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${movement}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`); // * The Math.abs() static method returns the absolute value of a number
+//   }
+// }
+
+// console.log("--- forEach + ternary operator  ---");
+
+// * The forEach() method executes a provided function once for each array element
+// * .forEach не использует continue and break..
+// movements.forEach((movement, i, array) =>
+//   movement > 0
+//     ? console.log(`Movement ${i + 1}: You deposited ${movement}`)
+//     : console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`)
+// );
 
 // * 004.THE NEW .at METHOD
 // const arr = [23, 11, 64];
