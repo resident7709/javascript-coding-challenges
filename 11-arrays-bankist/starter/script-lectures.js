@@ -1,12 +1,23 @@
 "use strict";
 
+// * 006..forEach WITH Maps AND Sets
+// * Map
 // const currencies = new Map([
 //   ["USD", "United States dollar"],
 //   ["EUR", "Euro"],
 //   ["GBP", "Pound sterling"],
 // ]);
 
-// * .forEach WITH Maps AND Sets
+// currencies.forEach((value, key, map) => {
+//   console.log(`${key}: ${value}`);
+// });
+
+// * Set
+// const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
+// console.log(currenciesUnique);
+// currenciesUnique.forEach((value, _, map) => {
+//   console.log(`${value}: ${value}`);
+// });
 
 // * LOOPING ARRAYS .forEach
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
