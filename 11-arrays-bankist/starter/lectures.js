@@ -1,6 +1,8 @@
 "use strict";
 
-// * 011.THE map() METHOD
+// * 013.The filter() Method
+
+// * 011.The map() Method
 // * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -29,7 +31,7 @@ const movementsDescriptions = movements.map(
 
 console.log(movementsDescriptions);
 
-// * 006.forEach WITH Maps AND Sets
+// * 006.forEach with Maps & Sets
 // * Map
 // const currencies = new Map([
 //   ["USD", "United States dollar"],
@@ -71,7 +73,7 @@ console.log(movementsDescriptions);
 //     : console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`)
 // );
 
-// * 004.THE NEW at() METHOD
+// * 004.The New at() Method
 // const arr = [23, 11, 64];
 
 // * getting last array element
