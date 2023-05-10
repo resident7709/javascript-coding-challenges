@@ -1,35 +1,49 @@
 "use strict";
 
 // * 013.The filter() Method
-
-// * 011.The map() Method
-// * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log(movements);
 
-const eurToUsd = 1.1;
-
 // * functional way..
-const movementsUSD = movements.map(mov => mov * eurToUsd);
+const deposits = movements.filter(mov => mov > 0);
 
-console.log(movementsUSD);
+const withdrawals = movements.filter(mov => mov < 0);
+
+console.log(deposits);
+console.log(withdrawals);
 
 // * for of way..
-const movementsUSDfor = [];
-for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+const depositsFor = [];
+for (const mov of movements) mov > 0 ? depositsFor.push(mov) : null;
 
-console.log(movementsUSDfor);
+console.log(depositsFor);
+
+// * 011.The map() Method
+// * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+// const eurToUsd = 1.1;
+
+// * functional way..
+// const movementsUSD = movements.map(mov => mov * eurToUsd);
+
+// console.log(movementsUSD);
+
+// * for of way..
+// const movementsUSDfor = [];
+// for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+
+// console.log(movementsUSDfor);
 
 // * ...
-const movementsDescriptions = movements.map(
-  (mov, i) =>
-    `Movement ${i + 1}: You ${mov > 0 ? "deposited" : "withdrew"} ${Math.abs(
-      mov
-    )}`
-);
+// const movementsDescriptions = movements.map(
+//   (mov, i) =>
+//     `Movement ${i + 1}: You ${mov > 0 ? "deposited" : "withdrew"} ${Math.abs(
+//       mov
+//     )}`
+// );
 
-console.log(movementsDescriptions);
+// console.log(movementsDescriptions);
 
 // * 006.forEach with Maps & Sets
 // * Map
