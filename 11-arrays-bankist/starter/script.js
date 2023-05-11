@@ -76,6 +76,13 @@ const displayMovements = movements => {
 
 displayMovements(account1.movements);
 
+const calcDisplayBalance = movements => {
+  const balance = movements.reduce((acc, mov) => acc + mov);
+  labelBalance.textContent = `${balance} €`; // * Alt hold + 0128(NumPad) = € sign..
+};
+
+calcDisplayBalance(account1.movements);
+
 const createUserNames = function (accs) {
   accs.forEach(acc => {
     acc.username = acc.owner

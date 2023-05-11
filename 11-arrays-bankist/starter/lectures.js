@@ -1,23 +1,43 @@
 "use strict";
 
-// * 013.The filter() Method
+// * 014.The reduce() Method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log(movements);
 
+// * accumulator (acc) => SNOWBALL..The value resulting from the previous call to callbackFn. On first call, initialValue if specified, otherwise the value of array[0]
+
 // * functional way..
-const deposits = movements.filter(mov => mov > 0);
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
 
-const withdrawals = movements.filter(mov => mov < 0);
-
-console.log(deposits);
-console.log(withdrawals);
+console.log(balance);
 
 // * for of way..
-const depositsFor = [];
-for (const mov of movements) mov > 0 ? depositsFor.push(mov) : null;
+// let balance2 = 0;
+// for (const mov of movements) balance2 += mov;
 
-console.log(depositsFor);
+// console.log(balance2);
+
+// * maximum value of array
+const max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
+
+console.log(max);
+
+// * 013.The filter() Method
+
+// * functional way..
+// const deposits = movements.filter(mov => mov > 0);
+
+// const withdrawals = movements.filter(mov => mov < 0);
+
+// console.log(deposits);
+// console.log(withdrawals);
+
+// * for of way..
+// const depositsFor = [];
+// for (const mov of movements) mov > 0 ? depositsFor.push(mov) : null;
+
+// console.log(depositsFor);
 
 // * 011.The map() Method
 // * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
