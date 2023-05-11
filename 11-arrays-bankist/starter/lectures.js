@@ -1,11 +1,21 @@
 "use strict";
 
 // * 016.The Magic of Chaining Methods
-
-// * 014.The reduce() Method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // console.log(movements);
+
+const eurToUsd = 1.1;
+
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUsd) // * map(mov, i, arr) for debugging..
+  .reduce((acc, mov) => acc + mov, 0)
+  .toFixed(2);
+
+// console.log(+totalDepositsUSD);
+
+// * 014.The reduce() Method
 
 // * accumulator (acc) => SNOWBALL..The value resulting from the previous call to callbackFn. On first call, initialValue if specified, otherwise the value of array[0]
 
@@ -43,8 +53,6 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // * 011.The map() Method
 // * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
-
-// const eurToUsd = 1.1;
 
 // * functional way..
 // const movementsUSD = movements.map(mov => mov * eurToUsd);
