@@ -1,16 +1,18 @@
 "use strict";
 
+// * 016.The Magic of Chaining Methods
+
 // * 014.The reduce() Method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-console.log(movements);
+// console.log(movements);
 
 // * accumulator (acc) => SNOWBALL..The value resulting from the previous call to callbackFn. On first call, initialValue if specified, otherwise the value of array[0]
 
 // * functional way..
-const balance = movements.reduce((acc, cur) => acc + cur, 0);
+// const balance = movements.reduce((acc, cur) => acc + cur, 0);
 
-console.log(balance);
+// console.log(balance);
 
 // * for of way..
 // let balance2 = 0;
@@ -19,9 +21,9 @@ console.log(balance);
 // console.log(balance2);
 
 // * maximum value of array
-const max = movements.reduce((acc, mov) => (acc > mov ? acc : mov));
+// const max = movements.reduce((acc, mov) => (acc > mov ? acc : mov), 0);
 
-console.log(max);
+// console.log(max);
 
 // * 013.The filter() Method
 

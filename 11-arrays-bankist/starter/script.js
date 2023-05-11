@@ -77,7 +77,7 @@ const displayMovements = movements => {
 displayMovements(account1.movements);
 
 const calcDisplayBalance = movements => {
-  const balance = movements.reduce((acc, mov) => acc + mov);
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`; // * Alt hold + 0128(NumPad) = € sign..
 };
 
