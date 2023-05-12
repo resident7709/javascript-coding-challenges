@@ -74,35 +74,29 @@ const displayMovements = movements => {
   });
 };
 
-displayMovements(account1.movements);
-
 const calcDisplayBalance = movements => {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance}€`; // * Alt hold + 0128(NumPad) = € sign..
 };
 
-calcDisplayBalance(account1.movements);
-
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (acct) {
+  const incomes = acct.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
 
-  const out = movements
+  const out = acct.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(out)}€`;
 
-  const interest = movements
+  const interest = acct.movements
     .filter(mov => mov > 0)
-    .map(dep => (dep * 1.2) / 100)
+    .map(dep => (dep * acct.interestRate) / 100)
     .filter(int => int >= 1)
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-
-calcDisplaySummary(account1.movements);
 
 const createUserNames = function (accs) {
   accs.forEach(acc => {
@@ -115,6 +109,34 @@ const createUserNames = function (accs) {
 };
 
 createUserNames(accounts);
+
+// * Event handler
+let currentAccount;
+
+btnLogin.addEventListener("click", e => {
+  e.preventDefault(); // * prevent form from submitting
+
+  currentAccount = accounts.find(
+    el => el.username === inputLoginUsername.value
+  );
+  // * ..?.pin - optional chaining!!
+  if (currentAccount?.pin === +inputLoginPin.value) {
+    // display UI and welcome message
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(" ")[0]
+    }`;
+    containerApp.style.opacity = 100;
+    // clear input fields
+    inputLoginUsername.value = inputLoginPin.value = "";
+    inputLoginPin.blur();
+    // display movements
+    displayMovements(currentAccount.movements);
+    // display balance
+    calcDisplayBalance(currentAccount.movements);
+    // display summary
+    calcDisplaySummary(currentAccount);
+  }
+});
 
 // * =================================== * //
 // console.log(accounts);
