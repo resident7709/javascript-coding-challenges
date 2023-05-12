@@ -1,19 +1,24 @@
 "use strict";
 
 // * 018.The find() Method
-
-// * 016.The Magic of Chaining Methods
+// * The find() method returns the first element in the provided array that satisfies the provided testing function
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// console.log(movements);
+console.log(movements);
 
-const eurToUsd = 1.1;
+const firstWithdrawal = movements.find(el => el < 0);
 
-const totalDepositsUSD = movements
-  .filter(mov => mov > 0)
-  .map(mov => mov * eurToUsd) // * map(mov, i, arr) for debugging..
-  .reduce((acc, mov) => acc + mov, 0)
-  .toFixed(2);
+console.log(firstWithdrawal);
+
+// * 016.The Magic of Chaining Methods
+
+// const eurToUsd = 1.1;
+
+// const totalDepositsUSD = movements
+//   .filter(mov => mov > 0)
+//   .map(mov => mov * eurToUsd) // * map(mov, i, arr) for debugging..
+//   .reduce((acc, mov) => acc + mov, 0)
+//   .toFixed(2);
 
 // console.log(+totalDepositsUSD);
 

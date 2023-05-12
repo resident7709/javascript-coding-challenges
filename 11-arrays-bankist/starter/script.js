@@ -115,3 +115,13 @@ const createUserNames = function (accs) {
 };
 
 createUserNames(accounts);
+
+// * =================================== * //
+// console.log(accounts);
+
+// const account = accounts.find(el => el.owner === "Jessica Davis");
+
+// console.log(account);
+
+// let account02;
+// for (const el of accounts) el.owner === "Sarah Smith" ? console.log(el) : "";
