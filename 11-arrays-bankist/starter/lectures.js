@@ -1,6 +1,7 @@
 "use strict";
 
 // * 021.The findIndex() Method
+// * The findIndex() method returns the index of the first element in an array that satisfies the provided testing function
 
 // * 018.The find() Method
 // * The find() method returns the first element in the provided array that satisfies the provided testing function
