@@ -138,7 +138,6 @@ btnLogin.addEventListener("click", e => {
     // clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
-
     // update UI
     updateUI(currentAccount);
   }
@@ -162,10 +161,23 @@ btnTransfer.addEventListener("click", e => {
     // doing the transfer
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
-
     // update UI
     updateUI(currentAccount);
   }
+});
+
+btnLoan.addEventListener("click", e => {
+  e.preventDefault();
+
+  const amount = +inputLoanAmount.value;
+
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    // add movement
+    currentAccount.movements.push(amount);
+    //update UI
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = "";
 });
 
 btnClose.addEventListener("click", e => {
@@ -178,10 +190,8 @@ btnClose.addEventListener("click", e => {
     const index = accounts.findIndex(
       acct => acct.username === currentAccount.username
     );
-
     // delete account
     accounts.splice(index, 1);
-
     // hide UI
     containerApp.style.opacity = 0;
   }
@@ -189,11 +199,16 @@ btnClose.addEventListener("click", e => {
 });
 
 // * =================================== * //
-// console.log(accounts);
+// * flat()
+const overallBalance = accounts
+  .map(acct => acct.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
 
-// const account = accounts.find(el => el.owner === "Jessica Davis");
+// * flatMap()
+const overallBalance2 = accounts
+  .flatMap(acct => acct.movements)
+  .reduce((acc, mov) => acc + mov, 0);
 
-// console.log(account);
-
-// let account02;
-// for (const el of accounts) el.owner === "Sarah Smith" ? console.log(el) : "";
+console.log(overallBalance);
+console.log(overallBalance2);

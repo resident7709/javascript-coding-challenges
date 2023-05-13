@@ -1,17 +1,44 @@
 "use strict";
 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// console.log(movements);
+
+// * 024.Sorting Arrays
+
+// * 023.flat() and flatMap()
+// * The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+// * The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a map()
+// const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+// const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+
+// console.log(arr.flat());
+// console.log(arrDeep.flat(2));
+
+// * 022.some() and every()
+// * The some() method tests whether at least ONE element in the array passes the test implemented by the provided function
+// * The every() method tests whether ALL elements in the array pass the test implemented by the provided function
+
+// console.log(movements.includes(-130)); // * equality
+// console.log(movements.some(mov => mov > 100)); // * condition
+// console.log(movements.every(mov => mov > 0)); // * condition
+// console.log(movements.every(mov => mov > -700)); // * condition
+
+// * Separate callback
+const deposit = mov => mov > 0;
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
+
 // * 021.The findIndex() Method
 // * The findIndex() method returns the index of the first element in an array that satisfies the provided testing function
 
 // * 018.The find() Method
 // * The find() method returns the first element in the provided array that satisfies the provided testing function
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-console.log(movements);
+// const firstWithdrawal = movements.find(el => el < 0);
 
-const firstWithdrawal = movements.find(el => el < 0);
-
-console.log(firstWithdrawal);
+// console.log(firstWithdrawal);
 
 // * 016.The Magic of Chaining Methods
 
