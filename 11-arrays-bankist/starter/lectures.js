@@ -4,11 +4,41 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // console.log(movements);
 
+// * More Ways of Creating and Filling Arrays
+
 // * 024.Sorting Arrays
+// * The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted
+// const owners = ["Jonas", "Zach", "Adam", "Marta"]; // * strings
+
+// console.log(
+//   owners.sort((a, b) => {
+//     if (a > b) return 1; // * keep order
+//     if (a < b) return -1; // * switch order
+//   })
+// );
+
+// console.log(
+// * Ascending
+//   movements.sort((a, b) => a - b)
+// * Descending
+//   movements.sort((a, b) => b - a)
+// ); // * numbers, return < 0, a, b; return > 0, b, a;
 
 // * 023.flat() and flatMap()
 // * The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+// const overallBalance = accounts
+//   .map(acct => acct.movements)
+//   .flat()
+//   .reduce((acc, mov) => acc + mov, 0);
+
 // * The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a map()
+// const overallBalance2 = accounts
+//   .flatMap(acct => acct.movements)
+//   .reduce((acc, mov) => acc + mov, 0);
+
+// console.log(overallBalance);
+// console.log(overallBalance2);
+
 // const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 // const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 
@@ -25,7 +55,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(movements.every(mov => mov > -700)); // * condition
 
 // * Separate callback
-const deposit = mov => mov > 0;
+// const deposit = mov => mov > 0;
 // console.log(movements.some(deposit));
 // console.log(movements.every(deposit));
 // console.log(movements.filter(deposit));
