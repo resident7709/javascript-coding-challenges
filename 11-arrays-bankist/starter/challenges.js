@@ -40,8 +40,8 @@ const calcAverageHumanAge = ages => {
   console.log(+dogAgeInHumanYears);
 };
 
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
 // todo: Create a function 'calcAverageHumanAge', which accepts an arrays of dog's ages ('ages'), and does the following things in order:
 // todo: 1. Calculate the dog age in human years using the following formula: if the dog is <= 2 years old, humanAge = 2 * dogAge. If the dog is > 2 years old, humanAge = 16 + dogAge * 4
@@ -54,3 +54,36 @@ calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 // todo - Test data:
 // todo - Data 1: [5, 2, 4, 1, 15, 8, 3]
 // todo - Data 2: [16, 6, 10, 5, 6, 1, 4]
+
+// * CHALLENGE#4
+
+const dogs = [
+  {
+    weight: 22,
+    curFood: 250,
+    owners: ["Alice", "Bob"],
+  },
+  { weight: 8, curFood: 200, owners: ["Matilda"] },
+  { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
+  { weight: 32, curFood: 340, owners: ["Michael"] },
+];
+
+dogs.forEach(el => {
+  const recommendedFood = el.weight ** 0.75 * 28;
+  console.log(
+    `Recommended food portion for ${el.weight} kg is ${recommendedFood.toFixed(
+      1
+    )} grams`
+  );
+});
+
+// const eatingOkay = current > recommended * 0.9 && current < recommended * 1.1;
+
+// const eatingTooMuch = eatingTooMuch > eatingOkay;
+// const eatingTooLittle = eatingTooLittle < eatingOkay;
+
+// todo: ..if dogs are eating too much or too little.
+// todo: Eating too much = dog's current food portion is larger than the recommended portion, and eating too little = opposite.
+// todo: Eating an okay amount = dog's current food portion is within a range 10% above and 10% below the recommended portion (see hint).
+
+// todo: 1. Loop over the 'dogs' array containing dog objects, and for each dog, calculate the recommended food portion and add it to the object as a new property. Do not create a new array, simply loop over the array. Forumla: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
