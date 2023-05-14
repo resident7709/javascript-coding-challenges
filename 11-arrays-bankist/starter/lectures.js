@@ -4,10 +4,30 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // console.log(movements);
 
-// * More Ways of Creating and Filling Arrays
+// * 025.More Ways of Creating and Filling Arrays
+const arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(new Array(1, 2, 3, 4, 54, 67));
+
+const arrFromNewConstructor = new Array(7);
+
+// * The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array
+
+arrFromNewConstructor.fill("7709", 2, 3); // * value, start, end
+arr.fill(23, 4, 6);
+
+// * The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object
+
+const arrFromConstructor = Array.from({ length: 7 }, () => 1);
+const arrFromConstructor2 = Array.from({ length: 7 }, (_, i) => i + 1);
+
+// console.log(arr);
+// console.log(arrFromNewConstructor);
+// console.log(arrFromConstructor);
+// console.log(arrFromConstructor2);
 
 // * 024.Sorting Arrays
 // * The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted
+
 // const owners = ["Jonas", "Zach", "Adam", "Marta"]; // * strings
 
 // console.log(
@@ -26,12 +46,14 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // * 023.flat() and flatMap()
 // * The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+
 // const overallBalance = accounts
 //   .map(acct => acct.movements)
 //   .flat()
 //   .reduce((acc, mov) => acc + mov, 0);
 
 // * The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a map()
+
 // const overallBalance2 = accounts
 //   .flatMap(acct => acct.movements)
 //   .reduce((acc, mov) => acc + mov, 0);

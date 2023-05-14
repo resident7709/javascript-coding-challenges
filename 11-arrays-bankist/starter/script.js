@@ -210,3 +210,16 @@ btnSort.addEventListener("click", e => {
 });
 
 // * =================================== * //
+
+labelBalance.addEventListener("click", () => {
+  const movementsUI = Array.from(
+    document.querySelectorAll(".movements__value"),
+    el => +el.textContent.replace("€", "")
+  );
+
+  console.log(movementsUI);
+
+  const movementsUI2 = [...document.querySelectorAll(".movements__value")];
+
+  console.log(movementsUI2);
+});
