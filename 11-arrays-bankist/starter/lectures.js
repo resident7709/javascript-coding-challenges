@@ -4,8 +4,6 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // console.log(movements);
 
-// * 027.Array Methods Practice
-
 // * 025.More Ways of Creating and Filling Arrays
 const arr = [1, 2, 3, 4, 5, 6, 7];
 // console.log(new Array(1, 2, 3, 4, 54, 67));
