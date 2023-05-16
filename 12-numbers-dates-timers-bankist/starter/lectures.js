@@ -1,5 +1,28 @@
 "use strict";
 
+// * 006.Numeric Separators
+
+// * 005.The Reminder Operator
+// console.log(6 % 2); // * even
+// console.log(5 % 2); // * odd
+
+// const isEven = n => n % 2 === 0;
+
+// console.log(isEven(8));
+// console.log(isEven(23));
+// console.log(isEven(7709));
+
+// labelBalance.addEventListener("click", () => {
+//   [...document.querySelectorAll(".movements__row")].forEach((row, i) => {
+//     if (i % 2 === 0) {
+//       row.style.backgroundColor = "orangered";
+//     }
+//     if (i % 3 === 0) {
+//       row.style.backgroundColor = "blue";
+//     }
+//   });
+// }); // * good for every Nth time..
+
 // * 004.Math and Rounding
 // console.log(Math.sqrt(25)); // * квадратный корень
 // console.log(25 ** (1 / 2));
@@ -23,17 +46,17 @@ const randomInt = (min, max) =>
 // console.log(Math.round(77.7));
 // console.log(Math.round(77.1));
 
-console.log(Math.ceil(77.7)); // * округляет вверх
-console.log(Math.ceil("77.1"));
+// console.log(Math.ceil(77.7)); // * округляет вверх
+// console.log(Math.ceil("77.1"));
 
-console.log(Math.floor(77.1)); // * округляет вниз
-console.log(Math.floor("77.7"));
+// console.log(Math.floor(77.1)); // * округляет вниз
+// console.log(Math.floor("77.7"));
 
-console.log(Math.trunc("-77.7"));
-console.log(Math.floor("-77.7"));
+// console.log(Math.trunc("-77.7"));
+// console.log(Math.floor("-77.7"));
 
 // * Rounding Decimals
-console.log(+(77.777).toFixed(2));
+// console.log(+(77.777).toFixed(2));
 
 // * 003.Converting and Checking Numbers
 
