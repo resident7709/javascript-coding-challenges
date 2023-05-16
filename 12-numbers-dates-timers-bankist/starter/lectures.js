@@ -1,6 +1,32 @@
 "use strict";
 
-// * Working with BigInt
+// * 008.Creating Dates
+
+// * 007.Working with BigInt
+// console.log(2 ** 53 - 1);
+// console.log(Number.MAX_SAFE_INTEGER);
+
+// console.log(8934572103374722846582928117336182364n);
+// console.log(BigInt(8934572103374));
+
+// * Operations
+// console.log(10000n + 10000n);
+// console.log(9272762736817618726812761827n * 10000n);
+
+// const huge = 82768237628376237865373n;
+// const num = 77;
+
+// * Exceptions
+// console.log(2078797n > 89989);
+// console.log(20n === 20);
+// console.log(typeof 20n);
+// console.log(20n == "20");
+
+// console.log(huge + " is really bigInt!!");
+
+// * Divisions
+// console.log(huge / BigInt(num));
+// console.log(10n / 3n);
 
 // * 006.Numeric Separators
 // const diameter = 287_460_000_000;
