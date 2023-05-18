@@ -1,5 +1,7 @@
 "use strict";
 
+// * 010.Operations with Dates
+
 // * 008.Creating Dates
 
 // * Create a Date
@@ -14,24 +16,24 @@
 // console.log(new Date(3 * 24 * 60 * 60 * 1000));
 
 // * Working with Dates
-const future = new Date(2037, 10, 19, 15, 23);
+// const future = new Date(2037, 10, 19, 15, 23);
 
-console.log(future);
-console.log(future.getFullYear());
-console.log(future.getMonth());
-console.log(future.getDate());
-console.log(future.getDay());
-console.log(future.getHours());
-console.log(future.getMinutes());
-console.log(future.getSeconds());
-console.log(future.toISOString());
-console.log(future.getTime());
+// console.log(future);
+// console.log(future.getFullYear());
+// console.log(future.getMonth());
+// console.log(future.getDate());
+// console.log(future.getDay());
+// console.log(future.getHours());
+// console.log(future.getMinutes());
+// console.log(future.getSeconds());
+// console.log(future.toISOString());
+// console.log(future.getTime());
 
-console.log(new Date(2142246180000));
-console.log(Date.now());
+// console.log(new Date(2142246180000));
+// console.log(Date.now());
 
-future.setFullYear(2040);
-console.log(future);
+// future.setFullYear(2040);
+// console.log(future);
 
 // * 007.Working with BigInt
 // console.log(2 ** 53 - 1);
@@ -111,8 +113,8 @@ console.log(future);
 // console.log(Math.PI * Number.parseFloat("10px") ** 2); // * радиус
 // console.log(Math.trunc(Math.random() * 6) + 1); // * случайное число 1-6
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min) + 1) + min; // * 0...1 => 0...(max - min) => min...max
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min) + 1) + min; // * 0...1 => 0...(max - min) => min...max
 
 // console.log(randomInt(10, 20));
 
