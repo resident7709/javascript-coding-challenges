@@ -1,6 +1,6 @@
 "use strict";
 
-// * 011.Intl Dates
+// * 011.Intl Numbers
 
 // * 010.Operations with Dates
 const future = new Date(2037, 10, 19, 15, 23);
