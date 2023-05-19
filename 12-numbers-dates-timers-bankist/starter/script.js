@@ -92,7 +92,7 @@ const formatMovementDate = (date, locale) => {
   return new Intl.DateTimeFormat(locale).format(date);
 };
 
-const formatCur = function (value, locale, currency) {
+const formatCur = (value, locale, currency) => {
   return new Intl.NumberFormat(locale, {
     style: "currency",
     currency: currency,
@@ -133,7 +133,7 @@ const calcDisplayBalance = acct => {
   );
 };
 
-const calcDisplaySummary = function (acct) {
+const calcDisplaySummary = acct => {
   const incomes = acct.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
@@ -160,7 +160,7 @@ const calcDisplaySummary = function (acct) {
   );
 };
 
-const createUserNames = function (accs) {
+const createUserNames = accs => {
   accs.forEach(acc => {
     acc.username = acc.owner
       .toLowerCase()
@@ -172,7 +172,7 @@ const createUserNames = function (accs) {
 
 createUserNames(accounts);
 
-const updateUI = function (acct) {
+const updateUI = acct => {
   // display movements
   displayMovements(acct);
   // display balance
@@ -181,15 +181,39 @@ const updateUI = function (acct) {
   calcDisplaySummary(acct);
 };
 
+const startLogOutTimer = () => {
+  const tick = () => {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(time % 60).padStart(2, 0);
+
+    // print remaining time to UI
+    labelTimer.textContent = `${min}:${sec}`;
+
+    // when 0 secs - stop timer and log out user
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = "Log in to get started";
+      containerApp.style.opacity = 0;
+    }
+    // decrease 1 sec
+    time--;
+  };
+
+  let time = 300;
+
+  tick();
+  const timer = setInterval(tick, 1000);
+
+  return timer;
+};
+
 // * Event handlers
-let currentAccount;
+let currentAccount, timer;
 
 // * FAKE ALWAYS LOGGED IN
 currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
-
-// * Experimenting with API
 
 btnLogin.addEventListener("click", e => {
   e.preventDefault(); // * prevent form from submitting
@@ -232,6 +256,12 @@ btnLogin.addEventListener("click", e => {
     // clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
+
+    // timer
+    if (timer) clearInterval(timer);
+
+    timer = startLogOutTimer();
+
     // update UI
     updateUI(currentAccount);
   }
@@ -260,6 +290,9 @@ btnTransfer.addEventListener("click", e => {
     receiverAcc.movementsDates.push(new Date().toISOString());
     // update UI
     updateUI(currentAccount);
+    // reset timer
+    clearInterval(timer);
+    timer = startLogOutTimer();
   }
 });
 
@@ -276,6 +309,9 @@ btnLoan.addEventListener("click", e => {
       currentAccount.movementsDates.push(new Date().toISOString());
       // update UI
       updateUI(currentAccount);
+      // reset timer
+      clearInterval(timer);
+      timer = startLogOutTimer();
     }, 2500);
   }
   inputLoanAmount.value = "";
@@ -301,10 +337,12 @@ btnClose.addEventListener("click", e => {
 
 let sorted = false;
 
+// ? лишний клик при переходе из отсортированного массива пользователя..т.е.возврат к неотсортированному массиву..
+
 btnSort.addEventListener("click", e => {
   e.preventDefault();
 
-  displayMovements(currentAccount.movements, !sorted); // ! ???
+  displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
 
