@@ -1,22 +1,42 @@
 "use strict";
 
+// * 013.Timers
+
+// * setInterval()
+// setInterval(() => {
+//   const now = new Date().toLocaleTimeString();
+
+// console.log(now);
+// }, 1000);
+
+// * setTimeout()
+// const intent = ["Yajna", "Samadhi", "_"];
+
+// const timer = setTimeout(
+//   (int1, int2) => console.log(`Here is your Intent = ${int1} ${int2}!!🔥`),
+//   3000,
+//   ...intent
+// );
+
+// if (intent.includes("_")) clearTimeout(timer);
+
 // * 011.Intl Numbers
-const num = 9637456.28;
+// const num = 9637456.28;
 
-const options = {
-  style: "currency",
-  unit: "celsius",
-  currency: "EUR",
-  // useGrouping: false,
-};
+// const options = {
+//   style: "currency",
+//   unit: "celsius",
+//   currency: "EUR",
+// useGrouping: false,
+// };
 
-console.log("US:", new Intl.NumberFormat("en-US", options).format(num));
-console.log("De:", new Intl.NumberFormat("de-DE", options).format(num));
-console.log("Sy:", new Intl.NumberFormat("ar-SY", options).format(num));
-console.log(
-  navigator.language,
-  new Intl.NumberFormat(navigator.language, options).format(num)
-);
+// console.log("US:", new Intl.NumberFormat("en-US", options).format(num));
+// console.log("De:", new Intl.NumberFormat("de-DE", options).format(num));
+// console.log("Sy:", new Intl.NumberFormat("ar-SY", options).format(num));
+// console.log(
+//   navigator.language,
+//   new Intl.NumberFormat(navigator.language, options).format(num)
+// );
 
 // * 010.Operations with Dates
 // const future = new Date(2037, 10, 19, 15, 23);
