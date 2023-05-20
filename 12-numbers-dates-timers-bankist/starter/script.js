@@ -337,7 +337,7 @@ btnClose.addEventListener("click", e => {
 
 let sorted = false;
 
-// ? лишний клик при переходе из отсортированного массива пользователя..т.е.возврат к неотсортированному массиву..
+// ?..лишний клик при переходе из отсортированного массива пользователя..т.е.возврат к неотсортированному массиву..?
 
 btnSort.addEventListener("click", e => {
   e.preventDefault();
@@ -345,6 +345,3 @@ btnSort.addEventListener("click", e => {
   displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
-
-// * ===================================== * //
-// console.log(new Date(account1.movementsDates[0]));
