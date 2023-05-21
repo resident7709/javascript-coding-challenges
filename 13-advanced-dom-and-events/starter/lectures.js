@@ -1,18 +1,44 @@
 "use strict";
 
+// * 011. Event Delegation
+
 // * 009.Event Propagation: Bubbling and Capturing
 // * 010...in Practice
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+
+document.querySelector(".nav__link").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("link", e.target, e.currentTarget);
+  console.log(this === e.currentTarget);
+
+  // * stop propagation
+  //   e.stopPropagation();
+});
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("container", e.target, e.currentTarget);
+});
+
+document.querySelector(".nav").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("nav", e.target, e.currentTarget);
+});
 
 // * 008.Types of Events & Event Handlers
-const h1 = document.querySelector("h1");
+// const h1 = document.querySelector("h1");
 
-const clH1 = () => {
-  console.log("hi!!");
-};
+// const clH1 = () => {
+//   console.log("hi!!");
+// };
 
-h1.addEventListener("mouseenter", clH1);
+// h1.addEventListener("mouseenter", clH1);
 // h1.onmouseleave = e => console.log("by!!"); // * old school way
-setTimeout(() => h1.removeEventListener("mouseenter", clH1), 3000);
+// setTimeout(() => h1.removeEventListener("mouseenter", clH1), 3000);
 
 // * 005.Selecting, Creating, Deleting Elements
 
