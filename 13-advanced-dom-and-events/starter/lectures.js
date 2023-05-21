@@ -1,6 +1,7 @@
 "use strict";
 
 // * 009.Event Propagation: Bubbling and Capturing
+// * 010...in Practice
 
 // * 008.Types of Events & Event Handlers
 const h1 = document.querySelector("h1");
