@@ -1,5 +1,18 @@
 "use strict";
 
+// * 009.Event Propagation: Bubbling and Capturing
+
+// * 008.Types of Events & Event Handlers
+const h1 = document.querySelector("h1");
+
+const clH1 = () => {
+  console.log("hi!!");
+};
+
+h1.addEventListener("mouseenter", clH1);
+// h1.onmouseleave = e => console.log("by!!"); // * old school way
+setTimeout(() => h1.removeEventListener("mouseenter", clH1), 3000);
+
 // * 005.Selecting, Creating, Deleting Elements
 
 // * Selecting elements
