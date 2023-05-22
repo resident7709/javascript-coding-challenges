@@ -36,17 +36,7 @@ btnScrollTo.addEventListener("click", () => {
   section1.scrollIntoView({ behavior: "smooth" });
 });
 
-// * Page Navigation
-// document.querySelectorAll(".nav__link").forEach(el => {
-//   el.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute("href");
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-//   });
-// });
-
-// * Event Delegation
+// * Page Navigation (Event Delegation)
 // todo: 1.addEventListener to common parent element
 // todo: 2.determine what element originated the event
 document.querySelector(".nav__links").addEventListener("click", e => {
@@ -58,7 +48,45 @@ document.querySelector(".nav__links").addEventListener("click", e => {
   }
 });
 
+// * Tabbed Component
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+
+// * Event Delegation
+tabsContainer.addEventListener("click", e => {
+  // * Matching strategy
+  const clicked = e.target.closest(".operations__tab");
+
+  if (!clicked) return; // * guard clause
+
+  // * Remove active classes
+  tabs.forEach(tb => tb.classList.remove("operations__tab--active"));
+  tabsContent.forEach(c => c.classList.remove("operations__content--active"));
+
+  // * Active tab
+  clicked.classList.add("operations__tab--active"); // for parent element
+
+  // * activate content area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add("operations__content--active");
+});
+
 // * ============================================== * //
+// * Tabbed Component
+// tabs.forEach(tb => tb.addEventListener("click", () => console.log("tab")));
+
+// * Page Navigation
+// document.querySelectorAll(".nav__link").forEach(el => {
+//   el.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute("href");
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+//   });
+// });
+
 // * 007.
 // const s1coords = section1.getBoundingClientRect();
 // console.log(s1coords);
