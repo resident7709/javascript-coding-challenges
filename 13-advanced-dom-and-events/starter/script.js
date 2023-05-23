@@ -156,6 +156,8 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
+// * Slider Component
+
 // * ============================================== * //
 // * Sticky Navigation
 // const initialCoords = section1.getBoundingClientRect();
