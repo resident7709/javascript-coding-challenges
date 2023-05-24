@@ -246,13 +246,13 @@ slider();
 // * ============================================== * //
 
 // * Lifecycle DOM Events
-document.addEventListener("DOMContentLoaded", e => {
-  console.log("htmp parsed and dom tree build", e);
-});
+// document.addEventListener("DOMContentLoaded", e => {
+//   console.log("htmp parsed and dom tree build", e);
+// });
 
-window.addEventListener("load", e => {
-  console.log("page fully loaded", e);
-});
+// window.addEventListener("load", e => {
+//   console.log("page fully loaded", e);
+// });
 
 // window.addEventListener("beforeunload", e => {
 //   e.preventDefault();
