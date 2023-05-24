@@ -244,6 +244,22 @@ const slider = function () {
 slider();
 
 // * ============================================== * //
+
+// * Lifecycle DOM Events
+document.addEventListener("DOMContentLoaded", e => {
+  console.log("htmp parsed and dom tree build", e);
+});
+
+window.addEventListener("load", e => {
+  console.log("page fully loaded", e);
+});
+
+// window.addEventListener("beforeunload", e => {
+//   e.preventDefault();
+//   console.log(e);
+//   e.returnValue = "";
+// });
+
 // * Sticky Navigation
 // const initialCoords = section1.getBoundingClientRect();
 
