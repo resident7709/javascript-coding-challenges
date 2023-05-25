@@ -5,6 +5,7 @@ const Person = function (firstName, birthYear) {
   this.firstName = firstName; // * instance
   this.birthYear = birthYear; // * properties
 
+  // * unpractical way..
   //   this.calcAge = function () {
   //     console.log(2023 - birthYear);
   //   };
@@ -37,13 +38,34 @@ alex.calcAge();
 stas.calcAge();
 
 // * prototype ~ prototypeOfLinkedObjects
-console.log(alex.__proto__);
-console.log(alex.__proto__ === Person.prototype);
-console.log(Person.prototype.isPrototypeOf(alex));
-console.log(Person.prototype.isPrototypeOf(Person));
+// console.log(alex.__proto__ === Person.prototype);
+// console.log(Person.prototype.isPrototypeOf(alex));
+// console.log(Person.prototype.isPrototypeOf(Person));
 
 Person.prototype.species = "homo spiritualis";
 
-console.log(alex.species);
-console.log(alex, elena);
-console.log(alex.hasOwnProperty("species"));
+// console.log(alex.species);
+// console.log(alex, elena);
+// console.log(alex.hasOwnProperty("species"));
+// console.log(alex.__proto__);
+// Object.prototype (top of prototype chain)
+// console.log(alex.__proto__.__proto__);
+// console.log(alex.__proto__.__proto__.__proto__);
+console.dir(Person.prototype.constructor);
+
+const arr = [9, 4, 6, 6, 4, 9, 8]; // * new Array === []
+
+console.log(arr.__proto__);
+console.log(arr.__proto__ === Array.prototype);
+console.log(arr.__proto__.__proto__);
+
+// * unpractical way..
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+
+console.log(arr.unique());
+
+const h1 = document.querySelector("h1");
+
+console.dir(x => x + 1);
