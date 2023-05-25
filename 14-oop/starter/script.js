@@ -1,7 +1,5 @@
 "use strict";
 
-// * 006.Prototypes
-
 // * 005.Constructor functions and the new Operator
 const Person = function (firstName, birthYear) {
   this.firstName = firstName; // * instance
@@ -17,13 +15,35 @@ const elena = new Person("Elena", 1971);
 const artur = new Person("Artur", 1992);
 const stas = new Person("Stas", 2003);
 
-console.log(alex);
-console.log(elena);
-console.log(artur);
-console.log(stas);
-console.log(stas instanceof Person);
+// console.log(alex);
+// console.log(elena);
+// console.log(artur);
+// console.log(stas);
+// console.log(stas instanceof Person);
 
 // * 1.New {} is created
 // * 2.Function is called, this = {}
 // * 3.{} linked to prototype
 // * 4.Function automatically return {}
+
+// * 006.Prototypes
+console.log(Person.prototype);
+
+Person.prototype.calcAge = function () {
+  console.log(2023 - this.birthYear);
+};
+
+alex.calcAge();
+stas.calcAge();
+
+// * prototype ~ prototypeOfLinkedObjects
+console.log(alex.__proto__);
+console.log(alex.__proto__ === Person.prototype);
+console.log(Person.prototype.isPrototypeOf(alex));
+console.log(Person.prototype.isPrototypeOf(Person));
+
+Person.prototype.species = "homo spiritualis";
+
+console.log(alex.species);
+console.log(alex, elena);
+console.log(alex.hasOwnProperty("species"));
