@@ -1,5 +1,7 @@
 "use strict";
 
+// * ES6 Classes
+
 // * 005.Constructor functions and the new Operator
 const Person = function (firstName, birthYear) {
   this.firstName = firstName; // * instance
