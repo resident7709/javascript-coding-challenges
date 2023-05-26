@@ -1,6 +1,25 @@
 "use strict";
 
+// * 012.Static Methods
+
 // * 011.Setters and Getters
+const account = {
+  owner: "John",
+  movements: [100, 200, -89, 670, 12000, 4700, 7709],
+
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
+  set latest(mov) {
+    this.movements.push(mov);
+  },
+};
+
+account.latest = 50;
+
+console.log(account);
+console.log(account.latest);
+console.log(account.movements);
 
 // * 010.ES6 Classes
 
@@ -12,8 +31,8 @@
 
 // * Declaration
 class Person {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName; // * instance
+  constructor(fullName, birthYear) {
+    this.fullName = fullName; // * instance
     this.birthYear = birthYear; // * properties
   }
   // * ..added to prototype property
@@ -23,19 +42,35 @@ class Person {
   greet() {
     console.log(`Hi, ${this.firstName}!!`);
   }
+
+  get age() {
+    return 2023 - this.birthYear;
+  }
+  // * set a property that already exists
+  set fullName(name) {
+    console.log(name);
+    if (name.includes(" ")) this._fullName = name;
+    else console.log(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
 }
 
 // Person.prototype.greet = function () {
 //   console.log(`Hi, ${this.firstName}!!`);
 // };
 
-const jessica = new Person("Jessica", 1982);
+const jessica = new Person("Jessica Davis", 1982);
+const walter = new Person("Walter Walters", 1990);
 
-console.log(jessica);
-console.log(jessica.__proto__ === Person.prototype);
+// console.log(jessica);
+// console.log(jessica.age);
+// console.log(jessica.__proto__ === Person.prototype);
 
-jessica.calcAge();
-jessica.greet();
+// jessica.calcAge();
+// jessica.greet();
 
 // * 005.Constructor functions and the new Operator
 // const Person = function (firstName, birthYear) {
