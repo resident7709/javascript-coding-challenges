@@ -1,7 +1,48 @@
 "use strict";
 
-// * 012.Static Methods
+// * 013.Object.create
+// const person = {
+//   isHuman: false,
+//   printIntroduction: function () {
+//     console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+//   },
+// };
 
+// const me = Object.create(person);
+
+// me.name = "Matthew"; // * "name" is a property set on "me", but not on "person"
+// me.isHuman = true; // * inherited properties can be overwritten
+
+// me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+
+const PersonProto = {
+  calcAge() {
+    console.log(2023 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProto);
+const sarah = Object.create(PersonProto);
+
+steven.firstName = "Steven";
+steven.birthYear = 2002;
+
+steven.calcAge();
+
+sarah.init("Sarah", 1989);
+sarah.calcAge();
+
+console.log(steven);
+console.log(sarah);
+// console.log(steven.__proto__ === PersonProto);
+
+// * 012.Static Methods
 // * 011.Setters and Getters
 const account = {
   owner: "John",
@@ -17,9 +58,9 @@ const account = {
 
 account.latest = 50;
 
-console.log(account);
-console.log(account.latest);
-console.log(account.movements);
+// console.log(account);
+// console.log(account.latest);
+// console.log(account.movements);
 
 // * 010.ES6 Classes
 
@@ -50,7 +91,7 @@ class PersonCl {
   }
   // * set a property that already exists
   set fullName(name) {
-    console.log(name);
+    // console.log(name);
     if (name.includes(" ")) this._fullName = name;
     else console.log(`${name} is not a full name!`);
   }
@@ -90,13 +131,13 @@ const Person = function (firstName, birthYear) {
   // };
 };
 
-Person.hey = function () {
-  console.log("Hi!!🖖");
-  console.log(this);
-};
+// Person.hey = function () {
+//   console.log("Hi!!🖖");
+//   console.log(this);
+// };
 
-Person.hey();
-PersonCl.hey();
+// Person.hey();
+// PersonCl.hey();
 
 // const alex = new Person("Alex", 1971);
 // const elena = new Person("Elena", 1971);
