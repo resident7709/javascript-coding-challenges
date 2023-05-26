@@ -30,11 +30,13 @@ console.log(account.movements);
 // const Person = class {}; // * Expression
 
 // * Declaration
-class Person {
+class PersonCl {
   constructor(fullName, birthYear) {
     this.fullName = fullName; // * instance
     this.birthYear = birthYear; // * properties
   }
+
+  // * Instance methods
   // * ..added to prototype property
   calcAge() {
     console.log(2023 - this.birthYear);
@@ -52,36 +54,49 @@ class Person {
     if (name.includes(" ")) this._fullName = name;
     else console.log(`${name} is not a full name!`);
   }
-
   get fullName() {
     return this._fullName;
   }
+
+  // * Static method
+  static hey() {
+    console.log("Hi, Cl!!🖖");
+    console.log(this);
+  }
 }
 
-// Person.prototype.greet = function () {
+// PersonCl.prototype.greet = function () {
 //   console.log(`Hi, ${this.firstName}!!`);
 // };
 
-const jessica = new Person("Jessica Davis", 1982);
-const walter = new Person("Walter Walters", 1990);
+const jessica = new PersonCl("Jessica Davis", 1982);
+const walter = new PersonCl("Walter Walters", 1990);
 
 // console.log(jessica);
 // console.log(jessica.age);
-// console.log(jessica.__proto__ === Person.prototype);
+// console.log(jessica.__proto__ === PersonCl.prototype);
 
 // jessica.calcAge();
 // jessica.greet();
 
 // * 005.Constructor functions and the new Operator
-// const Person = function (firstName, birthYear) {
-//   this.firstName = firstName; // * instance
-//   this.birthYear = birthYear; // * properties
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName; // * instance
+  this.birthYear = birthYear; // * properties
 
-// * unpractical way..
-//     this.calcAge = function () {
-//       console.log(2023 - birthYear);
-//     };
-// };
+  // * unpractical way..
+  // this.calcAge = function () {
+  //   console.log(2023 - birthYear);
+  // };
+};
+
+Person.hey = function () {
+  console.log("Hi!!🖖");
+  console.log(this);
+};
+
+Person.hey();
+PersonCl.hey();
 
 // const alex = new Person("Alex", 1971);
 // const elena = new Person("Elena", 1971);
