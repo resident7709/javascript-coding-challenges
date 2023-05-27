@@ -1,5 +1,7 @@
 "use strict";
 
+// * 015.Inheritance Between Classes: Constructor Functions
+
 // * 013.Object.create
 // const person = {
 //   isHuman: false,
@@ -44,19 +46,19 @@ console.log(sarah);
 
 // * 012.Static Methods
 // * 011.Setters and Getters
-const account = {
-  owner: "John",
-  movements: [100, 200, -89, 670, 12000, 4700, 7709],
+// const account = {
+//   owner: "John",
+//   movements: [100, 200, -89, 670, 12000, 4700, 7709],
 
-  get latest() {
-    return this.movements.slice(-1).pop();
-  },
-  set latest(mov) {
-    this.movements.push(mov);
-  },
-};
+//   get latest() {
+//     return this.movements.slice(-1).pop();
+//   },
+//   set latest(mov) {
+//     this.movements.push(mov);
+//   },
+// };
 
-account.latest = 50;
+// account.latest = 50;
 
 // console.log(account);
 // console.log(account.latest);
@@ -71,47 +73,47 @@ account.latest = 50;
 // const Person = class {}; // * Expression
 
 // * Declaration
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName; // * instance
-    this.birthYear = birthYear; // * properties
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName; // * instance
+//     this.birthYear = birthYear; // * properties
+//   }
 
-  // * Instance methods
-  // * ..added to prototype property
-  calcAge() {
-    console.log(2023 - this.birthYear);
-  }
-  greet() {
-    console.log(`Hi, ${this.firstName}!!`);
-  }
+// * Instance methods
+// * ..added to prototype property
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+//   greet() {
+//     console.log(`Hi, ${this.firstName}!!`);
+//   }
 
-  get age() {
-    return 2023 - this.birthYear;
-  }
-  // * set a property that already exists
-  set fullName(name) {
-    // console.log(name);
-    if (name.includes(" ")) this._fullName = name;
-    else console.log(`${name} is not a full name!`);
-  }
-  get fullName() {
-    return this._fullName;
-  }
+//   get age() {
+//     return 2023 - this.birthYear;
+//   }
+// * set a property that already exists
+//   set fullName(name) {
+// console.log(name);
+//     if (name.includes(" ")) this._fullName = name;
+//     else console.log(`${name} is not a full name!`);
+//   }
+//   get fullName() {
+//     return this._fullName;
+//   }
 
-  // * Static method
-  static hey() {
-    console.log("Hi, Cl!!🖖");
-    console.log(this);
-  }
-}
+// * Static method
+//   static hey() {
+//     console.log("Hi, Cl!!🖖");
+//     console.log(this);
+//   }
+// }
 
 // PersonCl.prototype.greet = function () {
 //   console.log(`Hi, ${this.firstName}!!`);
 // };
 
-const jessica = new PersonCl("Jessica Davis", 1982);
-const walter = new PersonCl("Walter Walters", 1990);
+// const jessica = new PersonCl("Jessica Davis", 1982);
+// const walter = new PersonCl("Walter Walters", 1990);
 
 // console.log(jessica);
 // console.log(jessica.age);
@@ -121,15 +123,15 @@ const walter = new PersonCl("Walter Walters", 1990);
 // jessica.greet();
 
 // * 005.Constructor functions and the new Operator
-const Person = function (firstName, birthYear) {
-  this.firstName = firstName; // * instance
-  this.birthYear = birthYear; // * properties
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName; // * instance
+//   this.birthYear = birthYear; // * properties
 
-  // * unpractical way..
-  // this.calcAge = function () {
-  //   console.log(2023 - birthYear);
-  // };
-};
+// * unpractical way..
+// this.calcAge = function () {
+//   console.log(2023 - birthYear);
+// };
+// };
 
 // Person.hey = function () {
 //   console.log("Hi!!🖖");
