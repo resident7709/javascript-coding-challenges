@@ -1,6 +1,39 @@
 "use strict";
 
 // * 015.Inheritance Between Classes: Constructor Functions
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName; // * instance
+  this.birthYear = birthYear; // * properties
+};
+
+Person.prototype.calcAge = function () {
+  console.log(2023 - this.birthYear);
+};
+
+const Student = function (firstName, birthYear, course) {
+  Person.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+// * Linking prototypes
+Student.prototype = Object.create(Person.prototype);
+
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and I'm study ${this.course}`);
+};
+
+const mike = new Student("Mike", 2020, "Computer Science");
+
+mike.introduce();
+mike.calcAge();
+
+console.log(mike.__proto__);
+console.log(mike instanceof Student);
+console.log(mike instanceof Person);
+console.log(mike instanceof Object);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
 
 // * 013.Object.create
 // const person = {
@@ -18,30 +51,30 @@
 // me.printIntroduction();
 // Expected output: "My name is Matthew. Am I human? true"
 
-const PersonProto = {
-  calcAge() {
-    console.log(2023 - this.birthYear);
-  },
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   },
 
-  init(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  },
-};
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
 
-const steven = Object.create(PersonProto);
-const sarah = Object.create(PersonProto);
+// const steven = Object.create(PersonProto);
+// const sarah = Object.create(PersonProto);
 
-steven.firstName = "Steven";
-steven.birthYear = 2002;
+// steven.firstName = "Steven";
+// steven.birthYear = 2002;
 
-steven.calcAge();
+// steven.calcAge();
 
-sarah.init("Sarah", 1989);
-sarah.calcAge();
+// sarah.init("Sarah", 1989);
+// sarah.calcAge();
 
-console.log(steven);
-console.log(sarah);
+// console.log(steven);
+// console.log(sarah);
 // console.log(steven.__proto__ === PersonProto);
 
 // * 012.Static Methods
