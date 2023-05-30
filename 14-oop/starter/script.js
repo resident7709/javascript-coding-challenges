@@ -1,39 +1,129 @@
 "use strict";
 
-// * 015.Inheritance Between Classes: Constructor Functions
-const Person = function (firstName, birthYear) {
-  this.firstName = firstName; // * instance
-  this.birthYear = birthYear; // * properties
+// * Another Class Example
+
+// * 018.Inheritance Between 'Classes': Object.create
+const PersonProto = {
+  calcAge() {
+    console.log(2023 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
 };
 
-Person.prototype.calcAge = function () {
-  console.log(2023 - this.birthYear);
-};
+const steven = Object.create(PersonProto);
 
-const Student = function (firstName, birthYear, course) {
-  Person.call(this, firstName, birthYear);
+const StudentProto = Object.create(PersonProto);
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
   this.course = course;
 };
 
-// * Linking prototypes
-Student.prototype = Object.create(Person.prototype);
-
-Student.prototype.introduce = function () {
+StudentProto.introduce = function () {
   console.log(`My name is ${this.firstName} and I'm study ${this.course}`);
 };
 
-const mike = new Student("Mike", 2020, "Computer Science");
+const jay = Object.create(StudentProto);
 
-mike.introduce();
-mike.calcAge();
+jay.init("Jay", 2010, "Computer Science");
+jay.introduce();
+jay.calcAge();
 
-console.log(mike.__proto__);
-console.log(mike instanceof Student);
-console.log(mike instanceof Person);
-console.log(mike instanceof Object);
+// * 017.Inheritance Between 'Classes': ES6 Classes
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
 
-Student.prototype.constructor = Student;
-console.dir(Student.prototype.constructor);
+  calcAge() {
+    console.log(2023 - this.birthYear);
+  }
+  greet() {
+    console.log(`Hi, ${this.firstName}!!`);
+  }
+
+  get age() {
+    return 2023 - this.birthYear;
+  }
+  // * set a property that already exists
+  set fullName(name) {
+    // console.log(name);
+    if (name.includes(" ")) this._fullName = name;
+    else console.log(`${name} is not a full name!`);
+  }
+  get fullName() {
+    return this._fullName;
+  }
+  // * Static method
+  static hey() {
+    console.log("Hi, Cl!!🖖");
+    console.log(this);
+  }
+}
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    super(fullName, birthYear); // * always needs to happen first
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I'm study ${this.course}`);
+  }
+  calcAge() {
+    console.log(
+      `I'm ${
+        2037 - this.birthYear
+      } years old, but as a student I feel more like ${
+        2037 - this.birthYear + 10
+      }..`
+    );
+  }
+}
+
+const martha = new StudentCl("Martha Jones", 2012, "Software Engineering");
+
+// martha.introduce();
+// martha.calcAge();
+
+// * 015.Inheritance Between 'Classes': Constructor Functions
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName; // * instance
+//   this.birthYear = birthYear; // * properties
+// };
+
+// Person.prototype.calcAge = function () {
+//   console.log(2023 - this.birthYear);
+// };
+
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+
+// * Linking prototypes
+// Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I'm study ${this.course}`);
+// };
+
+// const mike = new Student("Mike", 2020, "Computer Science");
+
+// mike.introduce();
+// mike.calcAge();
+
+// console.log(mike.__proto__);
+// console.log(mike instanceof Student);
+// console.log(mike instanceof Person);
+// console.log(mike instanceof Object);
+
+// Student.prototype.constructor = Student;
+// console.dir(Student.prototype.constructor);
 
 // * 013.Object.create
 // const person = {
