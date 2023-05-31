@@ -1,36 +1,57 @@
 "use strict";
 
+// * Encapsulation: Private Class Fields and Methods
+
+// * Public fields, Public methods
+// * Private fields, Private methods
+// * ...and static version
+
 // * Another Class Example
 class Account {
+  locale = navigator.language; // * Public fields (instances)
+  // _movements = [];
+
+  #movements = []; // * Private fields (instances)
+  #pin;
+
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
-    this._pin = pin; // * protected property
-    this._movements = []; // * protected property
-    this.locale = navigator.language;
+    this.#pin = pin; // * protected property
+    // this._movements = []; // * protected property
+    // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}!!`);
   }
-  // * public interface
+
+  // * Public methods (public interface)
   getMovements() {
-    return this._movements;
+    return this.#movements;
   }
 
   deposit(val) {
-    this._movements.push(val);
+    this.#movements.push(val);
   }
   withdraw(val) {
     this.deposit(-val);
   }
 
-  _approveLoan(val) {
-    return true;
-  }
   requestLoan(val) {
+    // if (this.#approveLoan(val)) { // * for future..
     if (this._approveLoan(val)) {
       this.deposit(val);
       console.log(`Loan approved!!😇`);
     }
+  }
+
+  static helper() {
+    console.log("I'm Always Your Helper!!✨");
+  }
+
+  // * Private methods
+  // #approveLoan(val) { // * for future..
+  _approveLoan(val) {
+    return true;
   }
 }
 
@@ -43,9 +64,11 @@ acc1.deposit(200);
 acc1.withdraw(100);
 // acc1._approveLoan(45000);
 acc1.requestLoan(45000);
+Account.helper();
 
 console.log(acc1);
-console.log(acc1._pin);
+console.log(acc1.getMovements());
+console.log(acc1._approveLoan(100));
 
 // * 018.Inheritance Between 'Classes': Object.create
 // const PersonProto = {
