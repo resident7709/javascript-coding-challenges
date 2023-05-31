@@ -26,16 +26,16 @@ class Account {
 
   // * Public methods (public interface)
   getMovements() {
-    return this.#movements;
+    return this.#movements; // * ..ability to chain methods
   }
 
   deposit(val) {
     this.#movements.push(val);
-    return this;
+    return this; // * ..ability to chain methods
   }
   withdraw(val) {
     this.deposit(-val);
-    return this;
+    return this; // * ..ability to chain methods
   }
 
   requestLoan(val) {
@@ -43,7 +43,7 @@ class Account {
     if (this._approveLoan(val)) {
       this.deposit(val);
       console.log(`Loan approved!!😇`);
-      return this;
+      return this; // * ..ability to chain methods
     }
   }
 
