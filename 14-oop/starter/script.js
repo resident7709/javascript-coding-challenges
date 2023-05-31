@@ -1,91 +1,131 @@
 "use strict";
 
 // * Another Class Example
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}!!`);
+  }
+  // * public interface
+  deposit(val) {
+    this.movements.push(val);
+  }
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  approveLoan(val) {
+    return true;
+  }
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan approved!!😇`);
+    }
+  }
+}
+
+const acc1 = new Account("Jonas", "EUR", 1111);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+acc1.deposit(200);
+acc1.withdraw(100);
+acc1.approveLoan(45000);
+acc1.requestLoan(45000);
+
+console.log(acc1);
+console.log(acc1.pin);
 
 // * 018.Inheritance Between 'Classes': Object.create
-const PersonProto = {
-  calcAge() {
-    console.log(2023 - this.birthYear);
-  },
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   },
 
-  init(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  },
-};
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
 
-const steven = Object.create(PersonProto);
+// const steven = Object.create(PersonProto);
 
-const StudentProto = Object.create(PersonProto);
-StudentProto.init = function (firstName, birthYear, course) {
-  PersonProto.init.call(this, firstName, birthYear);
-  this.course = course;
-};
+// const StudentProto = Object.create(PersonProto);
+// StudentProto.init = function (firstName, birthYear, course) {
+//   PersonProto.init.call(this, firstName, birthYear);
+//   this.course = course;
+// };
 
-StudentProto.introduce = function () {
-  console.log(`My name is ${this.firstName} and I'm study ${this.course}`);
-};
+// StudentProto.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I'm study ${this.course}`);
+// };
 
-const jay = Object.create(StudentProto);
+// const jay = Object.create(StudentProto);
 
-jay.init("Jay", 2010, "Computer Science");
-jay.introduce();
-jay.calcAge();
+// jay.init("Jay", 2010, "Computer Science");
+// jay.introduce();
+// jay.calcAge();
 
 // * 017.Inheritance Between 'Classes': ES6 Classes
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
 
-  calcAge() {
-    console.log(2023 - this.birthYear);
-  }
-  greet() {
-    console.log(`Hi, ${this.firstName}!!`);
-  }
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+//   greet() {
+//     console.log(`Hi, ${this.firstName}!!`);
+//   }
 
-  get age() {
-    return 2023 - this.birthYear;
-  }
-  // * set a property that already exists
-  set fullName(name) {
-    // console.log(name);
-    if (name.includes(" ")) this._fullName = name;
-    else console.log(`${name} is not a full name!`);
-  }
-  get fullName() {
-    return this._fullName;
-  }
-  // * Static method
-  static hey() {
-    console.log("Hi, Cl!!🖖");
-    console.log(this);
-  }
-}
+//   get age() {
+//     return 2023 - this.birthYear;
+//   }
+// * set a property that already exists
+//   set fullName(name) {
+// console.log(name);
+//     if (name.includes(" ")) this._fullName = name;
+//     else console.log(`${name} is not a full name!`);
+//   }
+//   get fullName() {
+//     return this._fullName;
+//   }
+// * Static method
+//   static hey() {
+//     console.log("Hi, Cl!!🖖");
+//     console.log(this);
+//   }
+// }
 
-class StudentCl extends PersonCl {
-  constructor(fullName, birthYear, course) {
-    super(fullName, birthYear); // * always needs to happen first
-    this.course = course;
-  }
+// class StudentCl extends PersonCl {
+//   constructor(fullName, birthYear, course) {
+//     super(fullName, birthYear); // * always needs to happen first
+//     this.course = course;
+//   }
 
-  introduce() {
-    console.log(`My name is ${this.fullName} and I'm study ${this.course}`);
-  }
-  calcAge() {
-    console.log(
-      `I'm ${
-        2037 - this.birthYear
-      } years old, but as a student I feel more like ${
-        2037 - this.birthYear + 10
-      }..`
-    );
-  }
-}
+//   introduce() {
+//     console.log(`My name is ${this.fullName} and I'm study ${this.course}`);
+//   }
+//   calcAge() {
+//     console.log(
+//       `I'm ${
+//         2037 - this.birthYear
+//       } years old, but as a student I feel more like ${
+//         2037 - this.birthYear + 10
+//       }..`
+//     );
+//   }
+// }
 
-const martha = new StudentCl("Martha Jones", 2012, "Software Engineering");
+// const martha = new StudentCl("Martha Jones", 2012, "Software Engineering");
 
 // martha.introduce();
 // martha.calcAge();
