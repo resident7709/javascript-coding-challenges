@@ -31,9 +31,11 @@ class Account {
 
   deposit(val) {
     this.#movements.push(val);
+    return this;
   }
   withdraw(val) {
     this.deposit(-val);
+    return this;
   }
 
   requestLoan(val) {
@@ -41,6 +43,7 @@ class Account {
     if (this._approveLoan(val)) {
       this.deposit(val);
       console.log(`Loan approved!!😇`);
+      return this;
     }
   }
 
@@ -69,6 +72,12 @@ Account.helper();
 console.log(acc1);
 console.log(acc1.getMovements());
 console.log(acc1._approveLoan(100));
+
+// * Chaining methods
+acc1.deposit(300).deposit(500).withdraw(20).requestLoan(10000).withdraw(5000);
+
+console.log(acc1);
+console.log(acc1.getMovements());
 
 // * 018.Inheritance Between 'Classes': Object.create
 // const PersonProto = {
