@@ -3,7 +3,7 @@
 class Workout {
   date = new Date();
   id = (Date.now() + "").slice(-10);
-  clicks = 0; // ?
+  clicks = 0;
 
   constructor(coords, distance, duration) {
     this.coords = coords; // [lat, lng]
@@ -33,7 +33,7 @@ class Workout {
   }
 
   click() {
-    this.clicks++; // ?
+    this.clicks++;
   }
 }
 
@@ -71,9 +71,9 @@ class Cycling extends Workout {
   }
 }
 
-const run1 = new Running([39, -12], 5.2, 24, 178);
-const cycling1 = new Cycling([39, -12], 27, 95, 523);
-console.log(run1, cycling1);
+// const run1 = new Running([39, -12], 5.2, 24, 178);
+// const cycling1 = new Cycling([39, -12], 27, 95, 523);
+// console.log(run1, cycling1);
 
 // * App Architecture
 const form = document.querySelector(".form");
@@ -91,7 +91,11 @@ class App {
   #workouts = [];
 
   constructor() {
+    // * get user's position
     this._getPosition();
+    // * get data from local storage
+    this._getLocalStorage();
+    // * attach event handlers
     form.addEventListener("submit", this._newWorkout.bind(this));
     inputType.addEventListener("change", this._toggleElevationField);
     containerWorkouts.addEventListener("click", this._moveToPopup.bind(this));
@@ -123,6 +127,10 @@ class App {
 
     // * map clicks
     this.#map.on("click", this._showForm.bind(this));
+
+    this.#workouts.forEach(work => {
+      this._renderWorkoutMarker(work);
+    });
   }
 
   _showForm(mapE) {
@@ -190,7 +198,6 @@ class App {
 
     // * add new object to workout array
     this.#workouts.push(workout);
-    console.log(workout);
 
     // * render workout as a map-marker
     this._renderWorkoutMarker(workout);
@@ -200,6 +207,9 @@ class App {
 
     // * hide form + clear input fields
     this._hideForm();
+
+    // * local storage
+    this._setLocalStorage();
   }
 
   _renderWorkoutMarker(workout) {
@@ -288,7 +298,27 @@ class App {
     });
 
     // * public interface
-    workout.click(); // ?
+    // workout.click();
+  }
+
+  _setLocalStorage() {
+    localStorage.setItem("workouts", JSON.stringify(this.#workouts));
+  }
+  _getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem("workouts"));
+
+    if (!data) return;
+
+    this.#workouts = data;
+
+    this.#workouts.forEach(work => {
+      this._renderWorkout(work);
+    });
+  }
+
+  reset() {
+    localStorage.removeItem("workouts");
+    location.reload();
   }
 }
 
