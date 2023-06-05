@@ -3,75 +3,74 @@
 const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 
-// * 007.Callback Hell
-setTimeout(() => {
-  console.log("1 second passed");
-  setTimeout(() => {
-    console.log("2 second passed");
-    setTimeout(() => {
-      console.log("3 second passed");
-    }, 1000);
-  }, 1000);
-}, 1000);
+// * 008.Promises and the Fetch API
+// * 009.Consuming Promises
+// const request = new XMLHttpRequest();
+// request.open("GET", `https://restcountries.com/v2/name/${country}`);
+// request.send();
 
-const renderCountry = function (data, className = "") {
-  const html = `
-  <article class="country ${className}">
-    <img class="country__img" src="${data.flag}" />
-    <div class="country__data">
-      <h3 class="country__name">${data.name}</h3>
-      <h4 class="country__region">${data.region}</h4>
-      <p class="country__row"><span>👫</span>${(
-        +data.population / 1000000
-      ).toFixed(1)}</p>
-      <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
-      <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
-    </div>
-  </article>
-  `;
+const request = fetch("https://restcountries.com/v2/name/portugal");
 
-  countriesContainer.insertAdjacentHTML("beforeend", html);
-  countriesContainer.style.opacity = 1;
-};
+console.log(request);
 
-const getCountryAndNeighbour = function (country) {
-  // * AJAX Call country 1
-  const request = new XMLHttpRequest();
+// const renderCountry = function (data, className = "") {
+//   const html = `
+//   <article class="country ${className}">
+//   <img class="country__img" src="${data.flag}" />
+//   <div class="country__data">
+//   <h3 class="country__name">${data.name}</h3>
+//   <h4 class="country__region">${data.region}</h4>
+//   <p class="country__row"><span>👫</span>${(+data.population / 1000000).toFixed(
+//     1
+//   )}</p>
+//       <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
+//       <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
+//     </div>
+//   </article>
+//   `;
 
-  request.open("GET", `https://restcountries.com/v2/name/${country}`);
-  request.send();
+//   countriesContainer.insertAdjacentHTML("beforeend", html);
+//   countriesContainer.style.opacity = 1;
+// };
 
-  request.addEventListener("load", function () {
-    const [data] = JSON.parse(this.responseText);
-    console.log(data);
-    // * render country 1
-    renderCountry(data);
+// const getCountryAndNeighbour = function (country) {
+// * AJAX Call country 1
+//   const request = new XMLHttpRequest();
 
-    // * get neighbour country
-    const neighbour = data.borders?.[0];
+//   request.open("GET", `https://restcountries.com/v2/name/${country}`);
+//   request.send();
 
-    // const [neighbour] = data.borders;
+//   request.addEventListener("load", function () {
+//     const [data] = JSON.parse(this.responseText);
+//     console.log(data);
+// * render country 1
+//     renderCountry(data);
 
-    // if(!neighbour) return;
+// * get neighbour country
+//     const neighbour = data.borders?.[0];
 
-    // * AJAX Call country 2
-    const request2 = new XMLHttpRequest();
+// const [neighbour] = data.borders;
 
-    request2.open("GET", `https://restcountries.com/v2/alpha/${neighbour}`);
-    request2.send();
+// if(!neighbour) return;
 
-    request2.addEventListener("load", function () {
-      const data2 = JSON.parse(this.responseText);
-      console.log(data2);
+// * AJAX Call country 2
+//     const request2 = new XMLHttpRequest();
 
-      renderCountry(data2, "neighbour");
-    });
-  });
-};
+//     request2.open("GET", `https://restcountries.com/v2/alpha/${neighbour}`);
+//     request2.send();
+
+//     request2.addEventListener("load", function () {
+//       const data2 = JSON.parse(this.responseText);
+//       console.log(data2);
+
+//       renderCountry(data2, "neighbour");
+//     });
+//   });
+// };
 
 // getCountryAndNeighbour("portugal");
 // getCountryAndNeighbour("russia");
-getCountryAndNeighbour("indonesia");
+// getCountryAndNeighbour("indonesia");
 
 // * 005.Our First AJAX Call: XMLHttpRequest
 // const getCountryData = function (country) {
@@ -108,3 +107,14 @@ getCountryAndNeighbour("indonesia");
 // getCountryData("portugal");
 // getCountryData("russia");
 // getCountryData("indonesia");
+
+// * 007.Callback Hell
+// setTimeout(() => {
+//   console.log("1 second passed");
+//   setTimeout(() => {
+//     console.log("2 second passed");
+//     setTimeout(() => {
+//       console.log("3 second passed");
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
