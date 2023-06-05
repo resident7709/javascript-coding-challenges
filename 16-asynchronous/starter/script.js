@@ -33,15 +33,21 @@ const renderCountry = function (data, className = "") {
 };
 
 // * 009.Consuming Promises
+// * 010.Chaining Promises
 const getCountryData = function (country) {
   fetch(`https://restcountries.com/v2/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+
+      const neighbour = data[0].borders?.[0];
+      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data, "neighbour"));
 };
 
-// * 010.Chaining Promises
-
-getCountryData("russia");
+getCountryData("cyprus");
 
 // const getCountryAndNeighbour = function (country) {
 // * AJAX Call country 1
