@@ -28,15 +28,58 @@ const renderError = function (msg) {
   countriesContainer.style.opacity = 1;
 };
 
-// * 015.Event Loop in Practice
-console.log("Test start");
-setTimeout(() => console.log("0 sec timer"), 0);
-Promise.resolve("Resolved promise 1").then(res => console.log(res));
-Promise.resolve("Resolved promise 2").then(res => {
-  for (let i = 0; i < 1000000000; i++) {}
-  console.log(res);
+// * 016.Building a Simple Promise
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log("Draw started..🔮");
+  setTimeout(() => {
+    if (Math.random() >= 0.5) {
+      resolve("You WIN!!🤩");
+    } else {
+      reject(new Error("Oops..🤭"));
+    }
+  }, 2000);
 });
-console.log("Test end");
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// * promisifying setTimeout()
+const wait = secs => new Promise(resolve => setTimeout(resolve, secs * 1000));
+
+wait(2)
+  .then(() => {
+    console.log("1 second passed");
+    return wait(1);
+  })
+  .then(() => {
+    console.log("2 seconds passed");
+    return wait(1);
+  })
+  .then(() => {
+    console.log("3 seconds passed");
+    return wait(1);
+  })
+  .then(() => {
+    console.log("4 seconds passed");
+    return wait(1);
+  })
+  .then(() => {
+    console.log("5 seconds passed");
+    return wait(1);
+  })
+  .then(() => console.log("plus 1 more second.."));
+
+Promise.resolve("abc").then(x => console.log(x));
+Promise.reject(new Error("Error!!")).catch(x => console.error(x));
+
+// * 015.Event Loop in Practice
+// console.log("Test start");
+// setTimeout(() => console.log("0 sec timer"), 0);
+// Promise.resolve("Resolved promise 1").then(res => console.log(res));
+// Promise.resolve("Resolved promise 2").then(res => {
+//   for (let i = 0; i < 1000000000; i++) {}
+//   console.log(res);
+// });
+// console.log("Test end");
 
 // * 008.Promises and the Fetch API
 // const request = new XMLHttpRequest();
