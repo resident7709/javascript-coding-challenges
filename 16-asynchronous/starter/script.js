@@ -28,6 +28,8 @@ const renderError = function (msg) {
   countriesContainer.style.opacity = 1;
 };
 
+// * Consuming Promises with Async/Await
+
 // * 016.Building a Simple Promise
 // const lotteryPromise = new Promise(function (resolve, reject) {
 //   console.log("Draw started..🔮");
