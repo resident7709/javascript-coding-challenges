@@ -29,6 +29,37 @@ const renderError = function (msg) {
 };
 
 // * Consuming Promises with Async/Await
+const getPosition = () =>
+  new Promise((resolve, reject) =>
+    navigator.geolocation.getCurrentPosition(resolve, reject)
+  );
+
+// fetch(`https://restcountries.com/v2/name/${country}`).then(res =>
+//   console.log(res)
+// );
+
+const whereAmI = async () => {
+  // * Geolocation
+  const pos = await getPosition();
+  const { latitude: lat, longitude: lng } = pos.coords;
+
+  // * Reverse geocoding
+  const resGeo = await fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+  const dataGeo = await resGeo.json();
+  console.log(dataGeo);
+
+  // * Country data
+  const res = await fetch(
+    `https://restcountries.com/v2/name/${dataGeo.country}`
+  );
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
+};
+
+whereAmI();
+
+console.log("First!!");
 
 // * 016.Building a Simple Promise
 // const lotteryPromise = new Promise(function (resolve, reject) {
@@ -274,7 +305,7 @@ const renderError = function (msg) {
 // getCountryData("russia");
 // getCountryData("indonesia");
 
-// * 007.Callback Hell
+// * 007.Callbacks
 // setTimeout(() => {
 //   console.log("1 second passed");
 //   setTimeout(() => {
