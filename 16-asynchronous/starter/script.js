@@ -107,27 +107,79 @@ const getJSON = function (url, errorMsg = "Something went wrong..") {
 // }
 
 // * 021.Running Promises in Parallel
-const get3Countries = async function (c1, c2, c3) {
-  try {
-    // const [data1] = await getJSON(`https://restcountries.com/v2/name/${c1}`);
-    // const [data2] = await getJSON(`https://restcountries.com/v2/name/${c2}`);
-    // const [data3] = await getJSON(`https://restcountries.com/v2/name/${c3}`);
+// const get3Countries = async function (c1, c2, c3) {
+//   try {
+// const [data1] = await getJSON(`https://restcountries.com/v2/name/${c1}`);
+// const [data2] = await getJSON(`https://restcountries.com/v2/name/${c2}`);
+// const [data3] = await getJSON(`https://restcountries.com/v2/name/${c3}`);
 
-    // console.log([data1.capital, data2.capital, data3.capital]);
+// console.log([data1.capital, data2.capital, data3.capital]);
 
-    const data = await Promise.all([
-      getJSON(`https://restcountries.com/v2/name/${c1}`),
-      getJSON(`https://restcountries.com/v2/name/${c2}`),
-      getJSON(`https://restcountries.com/v2/name/${c3}`),
-    ]);
+//     const data = await Promise.all([
+//       getJSON(`https://restcountries.com/v2/name/${c1}`),
+//       getJSON(`https://restcountries.com/v2/name/${c2}`),
+//       getJSON(`https://restcountries.com/v2/name/${c3}`),
+//     ]);
 
-    console.log(data.map(d => d[0].capital));
-  } catch (err) {
-    console.error(err);
-  }
+//     console.log(data.map(d => d[0].capital));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
+// get3Countries("portugal", "russia", "china");
+
+// * 023.Other Promise Combinators: race, allSettled, any
+// * Promice.race
+(async function () {
+  const res = await Promise.race([
+    getJSON(`https://restcountries.com/v2/name/italy`),
+    getJSON(`https://restcountries.com/v2/name/russia`),
+    getJSON(`https://restcountries.com/v2/name/usa`),
+  ]);
+  console.log(res[0]);
+})();
+
+const timeout = sec => {
+  return new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error("Request took too long!!"));
+    }, sec * 1000);
+  });
 };
 
-get3Countries("portugal", "russia", "china");
+// * Promise.race
+Promise.race([
+  getJSON(`https://restcountries.com/v2/name/tanzania`),
+  timeout(5),
+])
+  .then(res => console.log(res[0]))
+  .catch(err => console.error(err));
+
+// * Promise.allSettled
+Promise.allSettled([
+  Promise.resolve("Success"),
+  Promise.reject("Error"),
+  Promise.resolve("Success"),
+]).then(res => console.log(res));
+
+// * Promise.all
+Promise.all([
+  Promise.resolve("Success"),
+  Promise.reject("Error"),
+  Promise.resolve("Success"),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+// * Promise.any [ES2021]
+Promise.any([
+  Promise.resolve("Success"),
+  Promise.reject("Error"),
+  Promise.resolve("Success"),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
 
 // * 016.Building a Simple Promise
 // const lotteryPromise = new Promise(function (resolve, reject) {
