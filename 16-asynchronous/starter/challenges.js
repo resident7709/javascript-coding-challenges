@@ -19,7 +19,7 @@ const createImage = imgPath => {
   });
 };
 
-// let currentImg;
+let currentImg;
 
 // createImage("./img/img-1.jpg")
 //   .then(img => {
@@ -61,9 +61,22 @@ const loadNPause = async () => {
   }
 };
 
-loadNPause();
+// loadNPause();
 
 // * Part 2
+const loadAll = async imgArr => {
+  try {
+    const imgs = imgArr.map(async img => await createImage(img));
+
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => img.classList.add("parallel"));
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+loadAll(["img/img-1.jpg", "img/img-2.jpg", "img/img-3.jpg"]);
 
 // * CHALLENGE#1
 // const whereAmI = function (lat, lng) {
