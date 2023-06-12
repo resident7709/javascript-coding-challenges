@@ -1,23 +1,23 @@
 "use strict";
 
 // * CHALLENGE#2
-// const imgContainer = document.querySelector(".images");
+const imgContainer = document.querySelector(".images");
 
-// const wait = secs => new Promise(resolve => setTimeout(resolve, secs * 1000));
+const wait = secs => new Promise(resolve => setTimeout(resolve, secs * 1000));
 
-// const createImage = imgPath => {
-//   return new Promise((resolve, reject) => {
-//     const img = document.createElement("img");
-//     img.src = imgPath;
+const createImage = imgPath => {
+  return new Promise((resolve, reject) => {
+    const img = document.createElement("img");
+    img.src = imgPath;
 
-//     img.addEventListener("load", () => {
-//       imgContainer.append(img);
-//       resolve(img);
-//     });
+    img.addEventListener("load", () => {
+      imgContainer.append(img);
+      resolve(img);
+    });
 
-//     img.addEventListener("error", () => reject(new Error("Image not found!!")));
-//   });
-// };
+    img.addEventListener("error", () => reject(new Error("Image not found!!")));
+  });
+};
 
 // let currentImg;
 
@@ -40,6 +40,30 @@
 //     currentImg.style.display = "none";
 //   })
 //   .catch(err => console.error(err));
+
+// *CHALLENGE#3
+// * Part 1
+const loadNPause = async () => {
+  try {
+    // Load image 1
+    let img = await createImage("./img/img-1.jpg");
+    console.log("Image 1 loaded");
+    await wait(2);
+    img.style.display = "none";
+
+    // Load image 2
+    img = await createImage("./img/img-2.jpg");
+    console.log("Image 2 loaded");
+    await wait(2);
+    img.style.display = "none";
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+loadNPause();
+
+// * Part 2
 
 // * CHALLENGE#1
 // const whereAmI = function (lat, lng) {
@@ -73,7 +97,7 @@
 // * Coordinates 2: 19.037, 72.873
 // * Coordinates 3: -33.933, 18.474
 
-// * ICE CREAM STORE
+// * ICE CREAM STORE Example
 const stocks = {
   fruits: ["strawberry", "grapes", "banana", "apple"],
   liquid: ["water", "ice"],
@@ -244,4 +268,4 @@ async function kitchen() {
   }
 }
 
-kitchen();
+// kitchen();
