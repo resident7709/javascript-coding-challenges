@@ -33,50 +33,62 @@ import add, { cart } from "./shoppingCart.js";
 // console.log(data);
 // console.log("something else");
 
-const getLastPost = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
+// const getLastPost = async () => {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const data = await res.json();
 
-  return { title: data.at(-1).title, text: data.at(-1).body };
-};
+//   return { title: data.at(-1).title, text: data.at(-1).body };
+// };
 
-const lastPost = getLastPost();
+// const lastPost = getLastPost();
 
-console.log(lastPost);
+// console.log(lastPost);
 
 // lastPost.then(last => console.log(last)); // * not very clean
 
-const lastPost2 = await getLastPost();
+// const lastPost2 = await getLastPost();
 
-console.log(lastPost2);
+// console.log(lastPost2);
 
 // * 007.The Module Pattern
-const ShoppingCart2 = (function () {
-  const cart = [];
-  const shippingCost = 10;
-  const totlaPrice = 237;
-  const totlaQuantity = 23;
+// const ShoppingCart2 = (function () {
+//   const cart = [];
+//   const shippingCost = 10;
+//   const totlaPrice = 237;
+//   const totlaQuantity = 23;
 
-  const addToCart = function (product, quantity) {
-    cart.push({ product, quantity });
-    console.log(
-      `${quantity} ${product} added to cart (shipping cost ${shippingCost})`
-    );
-  };
+//   const addToCart = function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(
+//       `${quantity} ${product} added to cart (shipping cost ${shippingCost})`
+//     );
+//   };
 
-  const orderStock = function (product, quantity) {
-    console.log(`${quantity} ${product} ordered from supplier`);
-  };
+//   const orderStock = function (product, quantity) {
+//     console.log(`${quantity} ${product} ordered from supplier`);
+//   };
 
-  return {
-    addToCart,
-    cart,
-    totlaPrice,
-    totlaQuantity,
-  };
-})();
+//   return {
+//     addToCart,
+//     cart,
+//     totlaPrice,
+//     totlaQuantity,
+//   };
+// })();
 
-ShoppingCart2.addToCart("Adrenaline", 1);
-ShoppingCart2.addToCart("pizza", 3);
+// ShoppingCart2.addToCart("Adrenaline", 1);
+// ShoppingCart2.addToCart("pizza", 3);
 
-console.log(ShoppingCart2);
+// console.log(ShoppingCart2);
+
+// * 008.CommonJS Modules
+// * Export
+// export.addToCart = function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(
+//       `${quantity} ${product} added to cart (shipping cost ${shippingCost})`
+//     );
+//   }; // * for node.js
+
+// * Import
+// const { addToCart } = require("./shoppingCart.js");
