@@ -82,7 +82,7 @@ import add, { cart } from "./shoppingCart.js";
 // console.log(ShoppingCart2);
 
 // * 008.CommonJS Modules
-// * Export
+// * export
 // export.addToCart = function (product, quantity) {
 //     cart.push({ product, quantity });
 //     console.log(
@@ -90,5 +90,5 @@ import add, { cart } from "./shoppingCart.js";
 //     );
 //   }; // * for node.js
 
-// * Import
+// * import
 // const { addToCart } = require("./shoppingCart.js");
