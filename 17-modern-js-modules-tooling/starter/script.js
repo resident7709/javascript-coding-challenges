@@ -18,8 +18,34 @@ console.log("Importing module");
 
 import add, { cart } from "./shoppingCart.js";
 
-add("pizza", 2);
-add("bananas", 5);
-add("apples", 3);
+// add("pizza", 2);
+// add("milk", 5);
+// add("cheese", 3);
 
-console.log(cart);
+// console.log(cart);
+
+// * 006.Top-Level await(ES2022)
+// console.log("start fetching");
+
+// const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+// const data = await res.json();
+
+// console.log(data);
+// console.log("something else");
+
+const getLastPost = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+
+  return { title: data.at(-1).title, text: data.at(-1).body };
+};
+
+const lastPost = getLastPost();
+
+console.log(lastPost);
+
+// lastPost.then(last => console.log(last)); // * not very clean
+
+const lastPost2 = await getLastPost();
+
+console.log(lastPost2);
