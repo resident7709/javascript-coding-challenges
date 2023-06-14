@@ -18,11 +18,11 @@ console.log("Importing module");
 
 import add, { cart } from "./shoppingCart.js";
 
-// add("pizza", 2);
-// add("milk", 5);
-// add("cheese", 3);
+add("pizza", 2);
+add("milk", 5);
+add("cheese", 3);
 
-// console.log(cart);
+console.log(cart);
 
 // * 006.Top-Level await(ES2022)
 // console.log("start fetching");
@@ -93,7 +93,9 @@ import add, { cart } from "./shoppingCart.js";
 // * import
 // const { addToCart } = require("./shoppingCart.js");
 
-import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+// * 010.Intro to NPM
+// import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+import cloneDeep from "lodash-es";
 
 const state = {
   cart: [
@@ -111,3 +113,7 @@ state.user.loggedIn = false;
 console.log(stateClone);
 
 console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
