@@ -1,4 +1,4 @@
-6694
+6696
 195C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\core\test\fixtures\parcel\yarn.lock133312445549254578 0
 178C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\watcher\index.d.ts133312445417243565 0
 174C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\js-yaml\bin\js-yaml.js133312445177332068 0
@@ -29,7 +29,7 @@
 160C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\escalade133312445147960193 1
 160C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\mdn-data133312445266815123 1
 187C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\css-tree\lib\generator\sourceMap.js133312445556893223 0
-143C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist133312480904953514 1
+143C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist133312909131063646 1
 197C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\permissions-api.js133312445677891466 0
 195C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\fs-search\fs-search.darwin-x64.node133312445200626243 0
 174C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\picomatch\CHANGELOG.md133312445158770134 0
@@ -57,7 +57,7 @@
 219C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeAttrs.js133312445326890832 0
 185C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@swc\helpers\esm\_to_primitive.js133312445549394582 0
 177C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\weak-lru-cache\index.d.ts133312445154813264 0
-148C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\script.js133312469948551709 0
+148C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\script.js133312912253845504 0
 172C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\posthtml-render\dist133312445136056377 1
 175C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lodash-es\sampleSize.js133312405962015811 0
 185C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\workers\src\childState.js133312445169407887 0
@@ -89,7 +89,7 @@
 223C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\tokenizer\utils.js133312445514403435 0
 187C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\update-browserslist-db\package.json133312445135826354 0
 194C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\utils\test\input\config\config.cjs133312445154663249 0
-151C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\package.json133312480459804524 0
+151C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\package.json133312845258944094 0
 199C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\transformer-html\src\HTMLTransformer.js133312445165459638 0
 160C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\boolbase133312445058291321 1
 191C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lmdb\node_modules\msgpackr\package.json133312445265252877 0
@@ -1655,6 +1655,7 @@
 171C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lodash-es\README.md133312405976686759 0
 183C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\regions\NR.js133312445676338619 0
 170C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\is-number\index.js133312445051393228 0
+165C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.caacbfca.js.map133312853126412899 0
 192C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\css-canvas.js133312445515253403 0
 208C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\030-config.md133312445374120043 0
 187C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\leaflet\dist\leaflet-src.esm.js.map133312399779280308 0
@@ -2694,6 +2695,7 @@
 182C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lodash-es\_baseWrapperValue.js133312405925902942 0
 181C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lmdb\dependencies\lz4\LICENSE133312445223200369 0
 183C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\leaflet\dist\leaflet-src.esm.js133312399774755043 0
+161C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.caacbfca.js133312861928585566 0
 198C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\csso\node_modules\css-tree\lib\syntax\index.js133312445546774569 0
 179C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lodash-es\_baseZipObject.js133312405925964655 0
 179C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\lodash-es\_charsEndIndex.js133312405926298255 0
@@ -3490,7 +3492,7 @@
 166C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\domhandler\lib133312445154823246 1
 197C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\hash\parcel-hash.linux-arm64-gnu.node133312445272386081 0
 172C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\domhandler\readme.md133312445146730233 0
-165C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.8cfc62b9.js.map133312480904933493 0
+165C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.8cfc62b9.js.map133312909131013645 0
 187C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules133312445685494664 1
 175C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\domhandler\lib\index.js133312445057715113 0
 176C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\domhandler\lib\node.d.ts133312445156513279 0
@@ -4840,7 +4842,7 @@
 195C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\css-selection.js133312445549284567 0
 192C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\css-shapes.js133312445549334582 0
 196C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\css-snappoints.js133312445549474536 0
-154C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.html133312480904503541 0
+154C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.html133312909130863638 0
 191C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\css-table.js133312445549724580 0
 209C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\url-scroll-to-text-fragment.js133312445682822241 0
 197C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\caniuse-lite\data\features\css-text-indent.js133312445549954590 0
@@ -6027,7 +6029,7 @@
 209C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\svgo-node.js133312445407444441 0
 204C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\svgo.js133312445418274509 0
 204C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\xast.js133312445420143090 0
-161C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.8cfc62b9.js133312480904713536 0
+161C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\dist\index.8cfc62b9.js133312909130963668 0
 211C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\svgo\config.js133312445207418953 0
 219C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\svgo\css-class-list.js133312445243652116 0
 225C:\Users\resident\Documents\Workspace\10-jonas-schmedtmann\01-javascript\javascript-coding-challenges\17-modern-js-modules-tooling\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib\svgo\css-select-adapter.d.ts133312445422445098 0
