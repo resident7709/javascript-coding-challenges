@@ -1,3 +1,4 @@
+// * Let's Fix Some Bad Code, Part-1, Part-2
 const budget = [
   { value: 250, description: "Sold old TV 📺", user: "jonas" },
   { value: -45, description: "Groceries 🥑", user: "jonas" },
