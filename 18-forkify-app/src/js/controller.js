@@ -6,9 +6,9 @@ import resultsView from "./views/resultsView.js";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 const controlRecipes = async function () {
   try {
@@ -32,12 +32,17 @@ const controlSearchResults = async function () {
   try {
     resultsView.renderSpinner();
 
-    const query = searchView.getQuery(); // * get search query
+    // * get search query
+    const query = searchView.getQuery();
     if (!query) return;
 
-    await model.loadSearchResults(query); // * load search results
+    // * load search results
+    await model.loadSearchResults(query);
 
-    resultsView.render(model.state.search.results); // * render results
+    // * render results
+    // resultsView.render(model.state.search.results);
+
+    resultsView.render(model.getSearchResultsPage());
   } catch (err) {
     console.error(err);
   }
