@@ -29,6 +29,10 @@ body {
   line-height: 1.6;
 }
 
+button {
+  font-family: inherit;
+}
+
 .container {
   background-color: #fff;
   border-radius: 9px;
